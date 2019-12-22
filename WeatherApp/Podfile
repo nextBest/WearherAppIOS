@@ -6,5 +6,5 @@ target 'WeatherApp' do
   use_frameworks!
 
   # Pods for WeatherApp
-
+  pod 'SwiftLint', '0.38.0'
 end

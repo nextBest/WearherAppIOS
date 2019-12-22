@@ -13,3 +13,7 @@ WeatherApp/Pods/Target Support Files/Pods-WeatherApp/Pods-WeatherApp.release.xcc
 WeatherApp/WeatherApp.xcworkspace/contents.xcworkspacedata
 WeatherApp/WeatherApp.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
 WeatherApp/WeatherApp.xcworkspace/xcuserdata/nextbest.xcuserdatad/UserInterfaceState.xcuserstate
+WeatherApp/Pods/Pods.xcodeproj/xcuserdata/nextbest.xcuserdatad/xcschemes/SwiftLint.xcscheme
+WeatherApp/Pods/SwiftLint/LICENSE
+WeatherApp/Pods/SwiftLint/swiftlint
+WeatherApp/Pods/Target Support Files/SwiftLint/SwiftLint.xcconfig
