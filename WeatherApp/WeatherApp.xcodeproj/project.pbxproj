@@ -88,7 +88,6 @@
 				90F68AB8F358EA9DB7836B55 /* Pods-WeatherApp.debug.xcconfig */,
 				24C86508C794674CA542782B /* Pods-WeatherApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -103,6 +102,7 @@
 				5C42C58B23AEBD750045047E /* Sources */,
 				5C42C58C23AEBD750045047E /* Frameworks */,
 				5C42C58D23AEBD750045047E /* Resources */,
+				5C42C5A623B036950045047E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -160,6 +160,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5C42C5A623B036950045047E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 		EF132B9DBEF040B568817B1F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
