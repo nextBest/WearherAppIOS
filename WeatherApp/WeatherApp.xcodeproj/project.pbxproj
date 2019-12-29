@@ -63,15 +63,39 @@
 		5C42C59123AEBD750045047E /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
-				5C42C59223AEBD750045047E /* AppDelegate.swift */,
-				5C42C59423AEBD750045047E /* SceneDelegate.swift */,
-				5C42C59623AEBD750045047E /* ViewController.swift */,
-				5C42C59823AEBD750045047E /* Main.storyboard */,
-				5C42C59B23AEBD770045047E /* Assets.xcassets */,
+				5C8E960F23B9349B007968D0 /* Application */,
 				5C42C59D23AEBD770045047E /* LaunchScreen.storyboard */,
-				5C42C5A023AEBD770045047E /* Info.plist */,
+				5C42C59823AEBD750045047E /* Main.storyboard */,
+				5C8E960C23B93225007968D0 /* Resources */,
+				5C8E960D23B93331007968D0 /* SupportingFiles */,
+				5C42C59623AEBD750045047E /* ViewController.swift */,
 			);
 			path = WeatherApp;
+			sourceTree = "<group>";
+		};
+		5C8E960C23B93225007968D0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5C42C59B23AEBD770045047E /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5C8E960D23B93331007968D0 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				5C42C5A023AEBD770045047E /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		5C8E960F23B9349B007968D0 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				5C42C59423AEBD750045047E /* SceneDelegate.swift */,
+				5C42C59223AEBD750045047E /* AppDelegate.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 		CBA28511DB858A5D11F0DF96 /* Frameworks */ = {
@@ -355,7 +379,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RP2DLBW4NK;
-				INFOPLIST_FILE = WeatherApp/Info.plist;
+				INFOPLIST_FILE = WeatherApp/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -374,7 +398,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RP2DLBW4NK;
-				INFOPLIST_FILE = WeatherApp/Info.plist;
+				INFOPLIST_FILE = WeatherApp/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
