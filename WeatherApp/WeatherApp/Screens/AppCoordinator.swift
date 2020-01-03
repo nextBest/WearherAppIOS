@@ -24,7 +24,7 @@ class AppCoordinator: Coordinator {
     }
     
     private func runDashboardFlow() {
-        //TODO run main flow
+        // TODO run main flow
     }
     
     private static func makeRootViewControllerWithKeyAndVisible() -> UINavigationController {
