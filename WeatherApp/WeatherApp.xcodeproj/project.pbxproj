@@ -10,8 +10,6 @@
 		1ECF07B1FAC8C2A213D18E82 /* Pods_WeatherApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3219ABCC235103864CD4B38B /* Pods_WeatherApp.framework */; };
 		5C42C59323AEBD750045047E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C42C59223AEBD750045047E /* AppDelegate.swift */; };
 		5C42C59523AEBD750045047E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C42C59423AEBD750045047E /* SceneDelegate.swift */; };
-		5C42C59723AEBD750045047E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C42C59623AEBD750045047E /* ViewController.swift */; };
-		5C42C59A23AEBD750045047E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C42C59823AEBD750045047E /* Main.storyboard */; };
 		5C42C59C23AEBD770045047E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C42C59B23AEBD770045047E /* Assets.xcassets */; };
 		5C42C59F23AEBD770045047E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C42C59D23AEBD770045047E /* LaunchScreen.storyboard */; };
 		C2C7EB5323BF400100977DD6 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C7EB5223BF400100977DD6 /* Presentable.swift */; };
@@ -28,8 +26,6 @@
 		5C42C58F23AEBD750045047E /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C42C59223AEBD750045047E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C42C59423AEBD750045047E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5C42C59623AEBD750045047E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5C42C59923AEBD750045047E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C42C59B23AEBD770045047E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C42C59E23AEBD770045047E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C42C5A023AEBD770045047E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,14 +72,11 @@
 			isa = PBXGroup;
 			children = (
 				5C8E960F23B9349B007968D0 /* Application */,
-				5C42C59D23AEBD770045047E /* LaunchScreen.storyboard */,
-				5C42C59823AEBD750045047E /* Main.storyboard */,
 				5C8E960C23B93225007968D0 /* Resources */,
 				C2C7EB5123BF3FF100977DD6 /* Router */,
 				C2C7EB5B23BF590600977DD6 /* Screens */,
 				C2C7EB5623BF447300977DD6 /* Storyboards */,
 				5C8E960D23B93331007968D0 /* SupportingFiles */,
-				5C42C59623AEBD750045047E /* ViewController.swift */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";
@@ -125,6 +118,7 @@
 		C2C7EB5623BF447300977DD6 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				5C42C59D23AEBD770045047E /* LaunchScreen.storyboard */,
 				C2C7EB5723BF449200977DD6 /* Storyboard.swift */,
 				C2C7EB5923BF44AA00977DD6 /* Dashboard.storyboard */,
 			);
@@ -219,7 +213,6 @@
 			files = (
 				5C42C59F23AEBD770045047E /* LaunchScreen.storyboard in Resources */,
 				5C42C59C23AEBD770045047E /* Assets.xcassets in Resources */,
-				5C42C59A23AEBD750045047E /* Main.storyboard in Resources */,
 				C2C7EB5A23BF44AA00977DD6 /* Dashboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,7 +266,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C42C59723AEBD750045047E /* ViewController.swift in Sources */,
 				C2C7EB5323BF400100977DD6 /* Presentable.swift in Sources */,
 				C2C7EB5523BF43BC00977DD6 /* Router.swift in Sources */,
 				5C42C59323AEBD750045047E /* AppDelegate.swift in Sources */,
@@ -287,14 +279,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5C42C59823AEBD750045047E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5C42C59923AEBD750045047E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5C42C59D23AEBD770045047E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
