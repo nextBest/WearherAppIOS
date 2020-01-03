@@ -14,6 +14,8 @@
 		5C42C59A23AEBD750045047E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C42C59823AEBD750045047E /* Main.storyboard */; };
 		5C42C59C23AEBD770045047E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C42C59B23AEBD770045047E /* Assets.xcassets */; };
 		5C42C59F23AEBD770045047E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C42C59D23AEBD770045047E /* LaunchScreen.storyboard */; };
+		C2C7EB5323BF400100977DD6 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C7EB5223BF400100977DD6 /* Presentable.swift */; };
+		C2C7EB5523BF43BC00977DD6 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C7EB5423BF43BC00977DD6 /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		5C42C59E23AEBD770045047E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C42C5A023AEBD770045047E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90F68AB8F358EA9DB7836B55 /* Pods-WeatherApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp.debug.xcconfig"; path = "Target Support Files/Pods-WeatherApp/Pods-WeatherApp.debug.xcconfig"; sourceTree = "<group>"; };
+		C2C7EB5223BF400100977DD6 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
+		C2C7EB5423BF43BC00977DD6 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,7 @@
 		5C42C59123AEBD750045047E /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				C2C7EB5123BF3FF100977DD6 /* Router */,
 				5C8E960F23B9349B007968D0 /* Application */,
 				5C42C59D23AEBD770045047E /* LaunchScreen.storyboard */,
 				5C42C59823AEBD750045047E /* Main.storyboard */,
@@ -96,6 +101,15 @@
 				5C42C59223AEBD750045047E /* AppDelegate.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		C2C7EB5123BF3FF100977DD6 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				C2C7EB5223BF400100977DD6 /* Presentable.swift */,
+				C2C7EB5423BF43BC00977DD6 /* Router.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		CBA28511DB858A5D11F0DF96 /* Frameworks */ = {
@@ -231,6 +245,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C42C59723AEBD750045047E /* ViewController.swift in Sources */,
+				C2C7EB5323BF400100977DD6 /* Presentable.swift in Sources */,
+				C2C7EB5523BF43BC00977DD6 /* Router.swift in Sources */,
 				5C42C59323AEBD750045047E /* AppDelegate.swift in Sources */,
 				5C42C59523AEBD750045047E /* SceneDelegate.swift in Sources */,
 			);
