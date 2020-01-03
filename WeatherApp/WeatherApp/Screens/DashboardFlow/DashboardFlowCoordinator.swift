@@ -23,4 +23,8 @@ class DashboardFlowCoordinator: Coordinator {
         let dashboardViewController = DashboardFlowFactory.makeDashboardViewController()
         router.setRootModule(dashboardViewController, hideBar: false)
     }
+    
+    private func showTabBarVC() {
+         
+       }
 }
