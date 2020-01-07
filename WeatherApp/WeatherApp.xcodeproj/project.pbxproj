@@ -21,7 +21,6 @@
 		C2C7EB6523BF77FF00977DD6 /* DashboardFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C7EB6423BF77FF00977DD6 /* DashboardFlowCoordinator.swift */; };
 		C2C7EB6723BF78B500977DD6 /* DashboardFlowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C7EB6623BF78B500977DD6 /* DashboardFlowFactory.swift */; };
 		C2C7EB6A23BF799600977DD6 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C7EB6923BF799600977DD6 /* UIViewController+Extension.swift */; };
-		C2C7EB6C23BF90E300977DD6 /* DashboardTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C7EB6B23BF90E300977DD6 /* DashboardTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +42,6 @@
 		C2C7EB6423BF77FF00977DD6 /* DashboardFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardFlowCoordinator.swift; sourceTree = "<group>"; };
 		C2C7EB6623BF78B500977DD6 /* DashboardFlowFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardFlowFactory.swift; sourceTree = "<group>"; };
 		C2C7EB6923BF799600977DD6 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
-		C2C7EB6B23BF90E300977DD6 /* DashboardTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +147,6 @@
 				C2C7EB6323BF77BF00977DD6 /* Dashboard */,
 				C2C7EB6423BF77FF00977DD6 /* DashboardFlowCoordinator.swift */,
 				C2C7EB6623BF78B500977DD6 /* DashboardFlowFactory.swift */,
-				C2C7EB6B23BF90E300977DD6 /* DashboardTabBarController.swift */,
 			);
 			path = DashboardFlow;
 			sourceTree = "<group>";
@@ -302,7 +299,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2C7EB6C23BF90E300977DD6 /* DashboardTabBarController.swift in Sources */,
 				C2C7EB5323BF400100977DD6 /* Presentable.swift in Sources */,
 				C2C7EB6223BF776A00977DD6 /* DashboardViewController.swift in Sources */,
 				C2C7EB6723BF78B500977DD6 /* DashboardFlowFactory.swift in Sources */,

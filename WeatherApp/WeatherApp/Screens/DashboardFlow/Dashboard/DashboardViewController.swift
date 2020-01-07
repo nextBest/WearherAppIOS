@@ -12,6 +12,7 @@ class DashboardViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tabBarItem = UITabBarItem(tabBarSystemItem: .recents, tag: 0)
     }
 
 }

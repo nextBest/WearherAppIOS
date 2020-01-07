@@ -6,7 +6,7 @@
 //  Copyright © 2020 Mateusz Skałkowski. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class DashboardFlowCoordinator: Coordinator {
     private let router: Router
@@ -16,15 +16,17 @@ class DashboardFlowCoordinator: Coordinator {
     }
     
     override func start() {
-        runDashboardFlow()
-    }
-    
-    private func runDashboardFlow() {
-        let dashboardViewController = DashboardFlowFactory.makeDashboardViewController()
-        router.setRootModule(dashboardViewController, hideBar: false)
+        showTabBarVC()
     }
     
     private func showTabBarVC() {
-         
-       }
+        let tabBarViewController = UITabBarController()
+        tabBarViewController.viewControllers = createTabBarItems()
+        router.setRootModule(tabBarViewController, hideBar: false)
+    }
+    
+    private func createTabBarItems() -> [UIViewController] {
+        let dashboardViewController = DashboardFlowFactory.makeDashboardViewController()
+        return [dashboardViewController]
+    }
 }
