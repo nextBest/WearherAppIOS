@@ -20,11 +20,16 @@ class AppCoordinator: Coordinator {
     }
     
     private func runTutorialFlow() {
-        
+        // TODO run tutorial flow
     }
     
     private func runDashboardFlow() {
-        // TODO run main flow
+        let coordinator = DashboardFlowCoordinator(router: router)
+        coordinator.finishFlow = { [unowned self] coordinator in
+            self.removeCoordinator(coordinator)
+        }
+        addCoordinator(coordinator)
+        coordinator.start()
     }
     
     private static func makeRootViewControllerWithKeyAndVisible() -> UINavigationController {

@@ -17,6 +17,11 @@
 		C2C7EB5A23BF44AA00977DD6 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C7EB5923BF44AA00977DD6 /* Dashboard.storyboard */; };
 		C2C7EB5D23BF593000977DD6 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C7EB5C23BF593000977DD6 /* Coordinator.swift */; };
 		C2C7EB5F23BF596200977DD6 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C7EB5E23BF596200977DD6 /* AppCoordinator.swift */; };
+		C2C7EB6223BF776A00977DD6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C7EB6123BF776A00977DD6 /* MapViewController.swift */; };
+		C2C7EB6523BF77FF00977DD6 /* DashboardFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C7EB6423BF77FF00977DD6 /* DashboardFlowCoordinator.swift */; };
+		C2C7EB6723BF78B500977DD6 /* DashboardFlowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C7EB6623BF78B500977DD6 /* DashboardFlowFactory.swift */; };
+		C2C7EB6A23BF799600977DD6 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C7EB6923BF799600977DD6 /* UIViewController+Extension.swift */; };
+		C2F426BB23C4908A0052CF22 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F426BA23C4908A0052CF22 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +39,11 @@
 		C2C7EB5923BF44AA00977DD6 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		C2C7EB5C23BF593000977DD6 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		C2C7EB5E23BF596200977DD6 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		C2C7EB6123BF776A00977DD6 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		C2C7EB6423BF77FF00977DD6 /* DashboardFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardFlowCoordinator.swift; sourceTree = "<group>"; };
+		C2C7EB6623BF78B500977DD6 /* DashboardFlowFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardFlowFactory.swift; sourceTree = "<group>"; };
+		C2C7EB6923BF799600977DD6 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		C2F426BA23C4908A0052CF22 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +79,7 @@
 		5C42C59123AEBD750045047E /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				C2C7EB6823BF797B00977DD6 /* Extensions */,
 				5C8E960F23B9349B007968D0 /* Application */,
 				5C8E960C23B93225007968D0 /* Resources */,
 				C2C7EB5123BF3FF100977DD6 /* Router */,
@@ -125,10 +136,46 @@
 		C2C7EB5B23BF590600977DD6 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				C2C7EB6023BF774000977DD6 /* DashboardFlow */,
 				C2C7EB5C23BF593000977DD6 /* Coordinator.swift */,
 				C2C7EB5E23BF596200977DD6 /* AppCoordinator.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		C2C7EB6023BF774000977DD6 /* DashboardFlow */ = {
+			isa = PBXGroup;
+			children = (
+				C2F426B923C490630052CF22 /* Search */,
+				C2C7EB6323BF77BF00977DD6 /* Map */,
+				C2C7EB6423BF77FF00977DD6 /* DashboardFlowCoordinator.swift */,
+				C2C7EB6623BF78B500977DD6 /* DashboardFlowFactory.swift */,
+			);
+			path = DashboardFlow;
+			sourceTree = "<group>";
+		};
+		C2C7EB6323BF77BF00977DD6 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				C2C7EB6123BF776A00977DD6 /* MapViewController.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		C2C7EB6823BF797B00977DD6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C2C7EB6923BF799600977DD6 /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C2F426B923C490630052CF22 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				C2F426BA23C4908A0052CF22 /* SearchViewController.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		CBA28511DB858A5D11F0DF96 /* Frameworks */ = {
@@ -264,10 +311,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2C7EB5323BF400100977DD6 /* Presentable.swift in Sources */,
+				C2F426BB23C4908A0052CF22 /* SearchViewController.swift in Sources */,
+				C2C7EB6223BF776A00977DD6 /* MapViewController.swift in Sources */,
+				C2C7EB6723BF78B500977DD6 /* DashboardFlowFactory.swift in Sources */,
 				C2C7EB5523BF43BC00977DD6 /* Router.swift in Sources */,
 				5C42C59323AEBD750045047E /* AppDelegate.swift in Sources */,
 				C2C7EB5F23BF596200977DD6 /* AppCoordinator.swift in Sources */,
+				C2C7EB6523BF77FF00977DD6 /* DashboardFlowCoordinator.swift in Sources */,
 				C2C7EB5823BF449200977DD6 /* Storyboard.swift in Sources */,
+				C2C7EB6A23BF799600977DD6 /* UIViewController+Extension.swift in Sources */,
 				C2C7EB5D23BF593000977DD6 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
