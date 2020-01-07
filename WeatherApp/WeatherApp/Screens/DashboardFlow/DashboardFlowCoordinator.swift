@@ -27,6 +27,9 @@ class DashboardFlowCoordinator: Coordinator {
     
     private func createTabBarItems() -> [UIViewController] {
         let mapViewController = DashboardFlowFactory.makeMapViewController()
-        return [mapViewController]
+        mapViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .topRated, tag: 0)
+        let searchViewController = DashboardFlowFactory.makeSearchViewController()
+        searchViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 1)
+        return [mapViewController, searchViewController]
     }
 }

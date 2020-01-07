@@ -13,4 +13,9 @@ enum DashboardFlowFactory {
         let mapViewController = MapViewController.controllerFromStoryboard(.dashboard)
         return mapViewController
     }
+    
+    static func makeSearchViewController() -> SearchViewController {
+        let searchViewController = SearchViewController.controllerFromStoryboard(.dashboard)
+        return searchViewController
+    }
 }
