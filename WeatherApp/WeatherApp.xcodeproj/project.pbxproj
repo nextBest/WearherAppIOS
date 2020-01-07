@@ -79,6 +79,7 @@
 		5C42C59123AEBD750045047E /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				C26313C723C4C8AE009C707B /* Data */,
 				C2C7EB6823BF797B00977DD6 /* Extensions */,
 				5C8E960F23B9349B007968D0 /* Application */,
 				5C8E960C23B93225007968D0 /* Resources */,
@@ -112,6 +113,21 @@
 				5C42C59223AEBD750045047E /* AppDelegate.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		C26313C723C4C8AE009C707B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C26313C823C4C8C4009C707B /* Network */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		C26313C823C4C8C4009C707B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		C2C7EB5123BF3FF100977DD6 /* Router */ = {
@@ -207,6 +223,7 @@
 				5C42C58C23AEBD750045047E /* Frameworks */,
 				5C42C58D23AEBD750045047E /* Resources */,
 				5C42C5A623B036950045047E /* ShellScript */,
+				76271A0E285B99C2F4967A17 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -280,6 +297,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		76271A0E285B99C2F4967A17 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WeatherApp/Pods-WeatherApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WeatherApp/Pods-WeatherApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WeatherApp/Pods-WeatherApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		EF132B9DBEF040B568817B1F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
