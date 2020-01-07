@@ -26,7 +26,7 @@ class DashboardFlowCoordinator: Coordinator {
     }
     
     private func createTabBarItems() -> [UIViewController] {
-        let dashboardViewController = DashboardFlowFactory.makeDashboardViewController()
-        return [dashboardViewController]
+        let mapViewController = DashboardFlowFactory.makeMapViewController()
+        return [mapViewController]
     }
 }
