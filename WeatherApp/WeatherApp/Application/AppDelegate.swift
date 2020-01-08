@@ -8,6 +8,7 @@
 
 import UIKit
 import AlamofireNetworkActivityLogger
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         setupNetworkLogger()
+        setupGoogleMaps()
         startCoordinator()
         return true
     }
@@ -31,5 +33,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         appCoordinator = AppCoordinator()
         appCoordinator.start()
+    }
+    
+    private func setupGoogleMaps() {
+        GMSServices.provideAPIKey("")
     }
 }
