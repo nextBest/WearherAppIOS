@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireNetworkActivityLogger
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,10 +15,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var appCoordinator: AppCoordinator!
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        setupNetworkLogger()
+        startCoordinator()
+        return true
+    }
+    
+    // MARK: setup
+    
+    private func setupNetworkLogger() {
+        NetworkActivityLogger.shared.level = .info
+        NetworkActivityLogger.shared.startLogging()
+    }
+    
+    private func startCoordinator() {
         window = UIWindow(frame: UIScreen.main.bounds)
         appCoordinator = AppCoordinator()
         appCoordinator.start()
-        
-        return true
     }
 }

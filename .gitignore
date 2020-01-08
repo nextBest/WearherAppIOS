@@ -22,3 +22,59 @@ WeatherApp/Pods/Pods.xcodeproj/xcuserdata/mateuszskalkowski.xcuserdatad/xcscheme
 WeatherApp/Pods/Pods.xcodeproj/xcuserdata/mateuszskalkowski.xcuserdatad/xcschemes/xcschememanagement.plist
 WeatherApp/WeatherApp.xcodeproj/xcuserdata/mateuszskalkowski.xcuserdatad/xcschemes/xcschememanagement.plist
 WeatherApp/WeatherApp.xcworkspace/xcuserdata/mateuszskalkowski.xcuserdatad/UserInterfaceState.xcuserstate
+WeatherApp/Pods/Alamofire/LICENSE
+WeatherApp/Pods/Alamofire/README.md
+WeatherApp/Pods/Alamofire/Source/AFError.swift
+WeatherApp/Pods/Alamofire/Source/Alamofire.swift
+WeatherApp/Pods/Alamofire/Source/AlamofireExtended.swift
+WeatherApp/Pods/Alamofire/Source/CachedResponseHandler.swift
+WeatherApp/Pods/Alamofire/Source/DispatchQueue+Alamofire.swift
+WeatherApp/Pods/Alamofire/Source/EventMonitor.swift
+WeatherApp/Pods/Alamofire/Source/HTTPHeaders.swift
+WeatherApp/Pods/Alamofire/Source/HTTPMethod.swift
+WeatherApp/Pods/Alamofire/Source/MultipartFormData.swift
+WeatherApp/Pods/Alamofire/Source/MultipartUpload.swift
+WeatherApp/Pods/Alamofire/Source/NetworkReachabilityManager.swift
+WeatherApp/Pods/Alamofire/Source/Notifications.swift
+WeatherApp/Pods/Alamofire/Source/OperationQueue+Alamofire.swift
+WeatherApp/Pods/Alamofire/Source/ParameterEncoder.swift
+WeatherApp/Pods/Alamofire/Source/ParameterEncoding.swift
+WeatherApp/Pods/Alamofire/Source/Protector.swift
+WeatherApp/Pods/Alamofire/Source/RedirectHandler.swift
+WeatherApp/Pods/Alamofire/Source/Request.swift
+WeatherApp/Pods/Alamofire/Source/RequestInterceptor.swift
+WeatherApp/Pods/Alamofire/Source/RequestTaskMap.swift
+WeatherApp/Pods/Alamofire/Source/Response.swift
+WeatherApp/Pods/Alamofire/Source/ResponseSerialization.swift
+WeatherApp/Pods/Alamofire/Source/Result+Alamofire.swift
+WeatherApp/Pods/Alamofire/Source/RetryPolicy.swift
+WeatherApp/Pods/Alamofire/Source/ServerTrustEvaluation.swift
+WeatherApp/Pods/Alamofire/Source/Session.swift
+WeatherApp/Pods/Alamofire/Source/SessionDelegate.swift
+WeatherApp/Pods/Alamofire/Source/URLConvertible+URLRequestConvertible.swift
+WeatherApp/Pods/Alamofire/Source/URLEncodedFormEncoder.swift
+WeatherApp/Pods/Alamofire/Source/URLRequest+Alamofire.swift
+WeatherApp/Pods/Alamofire/Source/URLSessionConfiguration+Alamofire.swift
+WeatherApp/Pods/Alamofire/Source/Validation.swift
+WeatherApp/Pods/Pods.xcodeproj/xcuserdata/mateuszskalkowski.xcuserdatad/xcschemes/Alamofire.xcscheme
+WeatherApp/Pods/Target Support Files/Alamofire/Alamofire-dummy.m
+WeatherApp/Pods/Target Support Files/Alamofire/Alamofire-Info.plist
+WeatherApp/Pods/Target Support Files/Alamofire/Alamofire-prefix.pch
+WeatherApp/Pods/Target Support Files/Alamofire/Alamofire-umbrella.h
+WeatherApp/Pods/Target Support Files/Alamofire/Alamofire.modulemap
+WeatherApp/Pods/Target Support Files/Alamofire/Alamofire.xcconfig
+WeatherApp/Pods/Target Support Files/Pods-WeatherApp/Pods-WeatherApp-frameworks-Debug-input-files.xcfilelist
+WeatherApp/Pods/Target Support Files/Pods-WeatherApp/Pods-WeatherApp-frameworks-Debug-output-files.xcfilelist
+WeatherApp/Pods/Target Support Files/Pods-WeatherApp/Pods-WeatherApp-frameworks-Release-input-files.xcfilelist
+WeatherApp/Pods/Target Support Files/Pods-WeatherApp/Pods-WeatherApp-frameworks-Release-output-files.xcfilelist
+WeatherApp/Pods/Target Support Files/Pods-WeatherApp/Pods-WeatherApp-frameworks.sh
+WeatherApp/Pods/AlamofireNetworkActivityLogger/LICENSE
+WeatherApp/Pods/AlamofireNetworkActivityLogger/README.md
+WeatherApp/Pods/AlamofireNetworkActivityLogger/Source/NetworkActivityLogger.swift
+WeatherApp/Pods/Pods.xcodeproj/xcuserdata/mateuszskalkowski.xcuserdatad/xcschemes/AlamofireNetworkActivityLogger.xcscheme
+WeatherApp/Pods/Target Support Files/AlamofireNetworkActivityLogger/AlamofireNetworkActivityLogger-dummy.m
+WeatherApp/Pods/Target Support Files/AlamofireNetworkActivityLogger/AlamofireNetworkActivityLogger-Info.plist
+WeatherApp/Pods/Target Support Files/AlamofireNetworkActivityLogger/AlamofireNetworkActivityLogger-prefix.pch
+WeatherApp/Pods/Target Support Files/AlamofireNetworkActivityLogger/AlamofireNetworkActivityLogger-umbrella.h
+WeatherApp/Pods/Target Support Files/AlamofireNetworkActivityLogger/AlamofireNetworkActivityLogger.modulemap
+WeatherApp/Pods/Target Support Files/AlamofireNetworkActivityLogger/AlamofireNetworkActivityLogger.xcconfig
