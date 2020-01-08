@@ -9,13 +9,19 @@
 import Foundation
 
 protocol WeatherApi {
-    func searchLocationByText()
+    func searchLocationByText(text: String)
     func searchLocationByLocalization()
     func getWeather()
     func getWeatherForSpecificDay()
 }
 
 class WeatherApiImpl: WeatherApi {
+     private let requestManager: RequestManager
+       
+       init(requestManager: RequestManager) {
+           self.requestManager = requestManager
+       }
+    
     func getWeather() {
         
     }
@@ -24,7 +30,7 @@ class WeatherApiImpl: WeatherApi {
         
     }
     
-    func searchLocationByText() {
+    func searchLocationByText(text: String) {
         
     }
     

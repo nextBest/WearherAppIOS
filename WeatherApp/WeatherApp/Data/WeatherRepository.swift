@@ -12,6 +12,10 @@ protocol WeatherRepository {
     
 }
 
-class WeatherRepositoryImpl : WeatherRepository {
+class WeatherRepositoryImpl: WeatherRepository {
+    private let weatherApi: WeatherApi
     
+    init(weatherApi: WeatherApi) {
+        self.weatherApi = weatherApi
+    }
 }
