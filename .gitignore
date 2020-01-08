@@ -68,3 +68,13 @@ WeatherApp/Pods/Target Support Files/Pods-WeatherApp/Pods-WeatherApp-frameworks-
 WeatherApp/Pods/Target Support Files/Pods-WeatherApp/Pods-WeatherApp-frameworks-Release-input-files.xcfilelist
 WeatherApp/Pods/Target Support Files/Pods-WeatherApp/Pods-WeatherApp-frameworks-Release-output-files.xcfilelist
 WeatherApp/Pods/Target Support Files/Pods-WeatherApp/Pods-WeatherApp-frameworks.sh
+WeatherApp/Pods/AlamofireNetworkActivityLogger/LICENSE
+WeatherApp/Pods/AlamofireNetworkActivityLogger/README.md
+WeatherApp/Pods/AlamofireNetworkActivityLogger/Source/NetworkActivityLogger.swift
+WeatherApp/Pods/Pods.xcodeproj/xcuserdata/mateuszskalkowski.xcuserdatad/xcschemes/AlamofireNetworkActivityLogger.xcscheme
+WeatherApp/Pods/Target Support Files/AlamofireNetworkActivityLogger/AlamofireNetworkActivityLogger-dummy.m
+WeatherApp/Pods/Target Support Files/AlamofireNetworkActivityLogger/AlamofireNetworkActivityLogger-Info.plist
+WeatherApp/Pods/Target Support Files/AlamofireNetworkActivityLogger/AlamofireNetworkActivityLogger-prefix.pch
+WeatherApp/Pods/Target Support Files/AlamofireNetworkActivityLogger/AlamofireNetworkActivityLogger-umbrella.h
+WeatherApp/Pods/Target Support Files/AlamofireNetworkActivityLogger/AlamofireNetworkActivityLogger.modulemap
+WeatherApp/Pods/Target Support Files/AlamofireNetworkActivityLogger/AlamofireNetworkActivityLogger.xcconfig

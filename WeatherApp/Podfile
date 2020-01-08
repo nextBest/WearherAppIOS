@@ -8,4 +8,5 @@ target 'WeatherApp' do
   # Pods for WeatherApp
   pod 'SwiftLint', '0.38.0'
   pod 'Alamofire', '~> 5.0.0-rc.3'
+  pod 'AlamofireNetworkActivityLogger', '~> 3.0'
 end
