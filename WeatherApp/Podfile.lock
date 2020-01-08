@@ -2,24 +2,32 @@ PODS:
   - Alamofire (5.0.0-rc.3)
   - AlamofireNetworkActivityLogger (3.0.0):
     - Alamofire (~> 5.0.0-rc.2)
+  - GoogleMaps (3.7.0):
+    - GoogleMaps/Maps (= 3.7.0)
+  - GoogleMaps/Base (3.7.0)
+  - GoogleMaps/Maps (3.7.0):
+    - GoogleMaps/Base
   - SwiftLint (0.38.0)
 
 DEPENDENCIES:
   - Alamofire (~> 5.0.0-rc.3)
   - AlamofireNetworkActivityLogger (~> 3.0)
+  - GoogleMaps (= 3.7.0)
   - SwiftLint (= 0.38.0)
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - AlamofireNetworkActivityLogger
+    - GoogleMaps
     - SwiftLint
 
 SPEC CHECKSUMS:
   Alamofire: ca8c0de6906873be89d6deec5c8de279e00bf872
   AlamofireNetworkActivityLogger: 94e8a7d454a4a9800cef1d0c1d3699754493684b
+  GoogleMaps: 55da829c68aa931f3ae982b9e341cc2f3d89c587
   SwiftLint: 4105f061f9812b214568b736dab580ab2c73a582
 
-PODFILE CHECKSUM: 2f2bd446e6a7f64f38260adef470cf053efab87c
+PODFILE CHECKSUM: 0df0131554e27f3eb141076858ac4a6d66a46887
 
 COCOAPODS: 1.8.4
