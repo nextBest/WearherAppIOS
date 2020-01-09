@@ -10,9 +10,11 @@ import UIKit
 
 class DashboardFlowCoordinator: Coordinator {
     private let router: Router
+    private let weatherRepository: WeatherRepository
     
-    init(router: Router) {
+    init(router: Router, weatherRepository: WeatherRepository) {
         self.router = router
+        self.weatherRepository = weatherRepository
     }
     
     override func start() {
@@ -26,7 +28,7 @@ class DashboardFlowCoordinator: Coordinator {
     }
     
     private func createTabBarItems() -> [UIViewController] {
-        let mapViewController = DashboardFlowFactory.makeMapViewController()
+        let mapViewController = DashboardFlowFactory.makeMapViewController(weatherRepository: weatherRepository)
         mapViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .topRated, tag: 0)
         let searchViewController = DashboardFlowFactory.makeSearchViewController()
         searchViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 1)

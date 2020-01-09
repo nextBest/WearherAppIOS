@@ -9,8 +9,10 @@
 import Foundation
 
 enum DashboardFlowFactory {
-    static func makeMapViewController() -> MapViewController {
+    static func makeMapViewController(weatherRepository: WeatherRepository) -> MapViewController {
         let mapViewController = MapViewController.controllerFromStoryboard(.dashboard)
+        let mapPresenter = MapPresenter(weatherRepository: weatherRepository, view: mapViewController)
+        mapViewController.presenter = mapPresenter
         return mapViewController
     }
     

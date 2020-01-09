@@ -27,7 +27,7 @@ class AppCoordinator: Coordinator {
     }
     
     private func runDashboardFlow() {
-        let coordinator = DashboardFlowCoordinator(router: router)
+        let coordinator = DashboardFlowCoordinator(router: router, weatherRepository: weatherRepository)
         coordinator.finishFlow = { [unowned self] coordinator in
             self.removeCoordinator(coordinator)
         }

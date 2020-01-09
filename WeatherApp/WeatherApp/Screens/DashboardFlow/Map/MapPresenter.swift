@@ -7,11 +7,22 @@
 //
 
 import Foundation
+import GoogleMaps
+
+protocol MapViewDelegate: NSObject {
+    func setCameraPosition(latitude: Double, longitude: Double)
+}
 
 class MapPresenter {
+     weak fileprivate var view: MapViewDelegate?
     private let weatherRepository: WeatherRepository
     
-    init(weatherRepository: WeatherRepository) {
+    init(weatherRepository: WeatherRepository, view: MapViewDelegate) {
         self.weatherRepository = weatherRepository
+        self.view = view
+    }
+    
+    func locationFind(latitude: Double, longitude: Double) {
+        view?.setCameraPosition(latitude: latitude, longitude: longitude)
     }
 }

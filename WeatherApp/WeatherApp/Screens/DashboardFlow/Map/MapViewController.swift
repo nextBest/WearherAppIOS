@@ -13,7 +13,8 @@ import CoreLocation
 class MapViewController: UIViewController {
     
     var presenter: MapPresenter!
-    let locationManager = CLLocationManager()
+    private let locationManager = CLLocationManager()
+    private let mapView = GMSMapView(frame: CGRect.zero)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +22,6 @@ class MapViewController: UIViewController {
     }
     
     override func loadView() {
-        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
-        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         view = mapView
     }
     
@@ -34,10 +33,17 @@ class MapViewController: UIViewController {
     }
 }
 
+extension MapViewController: MapViewDelegate {
+    func setCameraPosition(latitude: Double, longitude: Double) {
+        let camera = GMSCameraPosition.camera(withLatitude: latitude, longitude: longitude, zoom: 6.0)
+        mapView.camera = camera
+    }
+}
+
 extension MapViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first {
-            location.coordinate.longitude
+            presenter.locationFind(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
         }
     }
     
