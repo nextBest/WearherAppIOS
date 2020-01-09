@@ -13,12 +13,11 @@ import CoreLocation
 class MapViewController: UIViewController {
     
     var presenter: MapPresenter!
-
+    let locationManager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let locationManager = CLLocationManager()
-        locationManager.delegate = self
-        locationManager.requestLocation()
+        setupLocationManager()
     }
     
     override func loadView() {
@@ -26,17 +25,38 @@ class MapViewController: UIViewController {
         let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         view = mapView
     }
+    
+    // MARK: Setup
+    
+    private func setupLocationManager() {
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
+    }
 }
 
 extension MapViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first {
-            print("jest lokalizacja")
+            location.coordinate.longitude
         }
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        error.localizedDescription
-        print("Location error")
+        // Do nothing
     }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .authorizedWhenInUse:
+            locationManager.requestLocation()
+        case .notDetermined:
+            locationManager.requestWhenInUseAuthorization()
+        case .denied:
+            if !CLLocationManager.locationServicesEnabled() {
+                locationManager.requestWhenInUseAuthorization()
+            }
+        default: break
+        }
+    }
+    
 }
