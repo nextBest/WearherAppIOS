@@ -10,9 +10,12 @@ import UIKit
 
 class AppCoordinator: Coordinator {
     private let router: Router
+    private let requestManager = RequestManager()
+    private let weatherRepository: WeatherRepository
     
     override init() {
         self.router = Router(rootController: AppCoordinator.makeRootViewControllerWithKeyAndVisible())
+        self.weatherRepository = WeatherRepositoryImpl(weatherApi: WeatherApiImpl(requestManager: requestManager))
     }
     
     override func start() {
