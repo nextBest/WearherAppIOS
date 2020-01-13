@@ -423,3 +423,181 @@ WeatherApp/Pods/Target Support Files/Pods-WeatherApp/Pods-WeatherApp-resources-D
 WeatherApp/Pods/Target Support Files/Pods-WeatherApp/Pods-WeatherApp-resources-Release-input-files.xcfilelist
 WeatherApp/Pods/Target Support Files/Pods-WeatherApp/Pods-WeatherApp-resources-Release-output-files.xcfilelist
 WeatherApp/Pods/Target Support Files/Pods-WeatherApp/Pods-WeatherApp-resources.sh
+WeatherApp/Pods/MaterialComponents/LICENSE
+WeatherApp/Pods/MaterialComponents/README.md
+WeatherApp/Pods/MaterialComponents/components/AnimationTiming/src/CAMediaTimingFunction+MDCAnimationTiming.h
+WeatherApp/Pods/MaterialComponents/components/AnimationTiming/src/CAMediaTimingFunction+MDCAnimationTiming.m
+WeatherApp/Pods/MaterialComponents/components/AnimationTiming/src/MaterialAnimationTiming.h
+WeatherApp/Pods/MaterialComponents/components/AnimationTiming/src/UIView+MDCTimingFunction.h
+WeatherApp/Pods/MaterialComponents/components/AnimationTiming/src/UIView+MDCTimingFunction.m
+WeatherApp/Pods/MaterialComponents/components/Buttons/src/MaterialButtons.h
+WeatherApp/Pods/MaterialComponents/components/Buttons/src/MDCButton.h
+WeatherApp/Pods/MaterialComponents/components/Buttons/src/MDCButton.m
+WeatherApp/Pods/MaterialComponents/components/Buttons/src/MDCFlatButton.h
+WeatherApp/Pods/MaterialComponents/components/Buttons/src/MDCFlatButton.m
+WeatherApp/Pods/MaterialComponents/components/Buttons/src/MDCFloatingButton+Animation.h
+WeatherApp/Pods/MaterialComponents/components/Buttons/src/MDCFloatingButton+Animation.m
+WeatherApp/Pods/MaterialComponents/components/Buttons/src/MDCFloatingButton.h
+WeatherApp/Pods/MaterialComponents/components/Buttons/src/MDCFloatingButton.m
+WeatherApp/Pods/MaterialComponents/components/Buttons/src/MDCRaisedButton.h
+WeatherApp/Pods/MaterialComponents/components/Buttons/src/MDCRaisedButton.m
+WeatherApp/Pods/MaterialComponents/components/Buttons/src/private/MDCButton+Subclassing.h
+WeatherApp/Pods/MaterialComponents/components/Elevation/src/MaterialElevation.h
+WeatherApp/Pods/MaterialComponents/components/Elevation/src/MDCElevatable.h
+WeatherApp/Pods/MaterialComponents/components/Elevation/src/MDCElevationOverriding.h
+WeatherApp/Pods/MaterialComponents/components/Elevation/src/UIColor+MaterialElevation.h
+WeatherApp/Pods/MaterialComponents/components/Elevation/src/UIColor+MaterialElevation.m
+WeatherApp/Pods/MaterialComponents/components/Elevation/src/UIView+MaterialElevationResponding.h
+WeatherApp/Pods/MaterialComponents/components/Elevation/src/UIView+MaterialElevationResponding.m
+WeatherApp/Pods/MaterialComponents/components/Ink/src/MaterialInk.h
+WeatherApp/Pods/MaterialComponents/components/Ink/src/MDCInkGestureRecognizer.h
+WeatherApp/Pods/MaterialComponents/components/Ink/src/MDCInkGestureRecognizer.m
+WeatherApp/Pods/MaterialComponents/components/Ink/src/MDCInkTouchController.h
+WeatherApp/Pods/MaterialComponents/components/Ink/src/MDCInkTouchController.m
+WeatherApp/Pods/MaterialComponents/components/Ink/src/MDCInkView.h
+WeatherApp/Pods/MaterialComponents/components/Ink/src/MDCInkView.m
+WeatherApp/Pods/MaterialComponents/components/Ink/src/private/MDCInkLayer.h
+WeatherApp/Pods/MaterialComponents/components/Ink/src/private/MDCInkLayer.m
+WeatherApp/Pods/MaterialComponents/components/Ink/src/private/MDCLegacyInkLayer+Private.h
+WeatherApp/Pods/MaterialComponents/components/Ink/src/private/MDCLegacyInkLayer.h
+WeatherApp/Pods/MaterialComponents/components/Ink/src/private/MDCLegacyInkLayer.m
+WeatherApp/Pods/MaterialComponents/components/OverlayWindow/src/MaterialOverlayWindow.h
+WeatherApp/Pods/MaterialComponents/components/OverlayWindow/src/MDCOverlayWindow.h
+WeatherApp/Pods/MaterialComponents/components/OverlayWindow/src/MDCOverlayWindow.m
+WeatherApp/Pods/MaterialComponents/components/private/Application/src/MaterialApplication.h
+WeatherApp/Pods/MaterialComponents/components/private/Application/src/UIApplication+AppExtensions.h
+WeatherApp/Pods/MaterialComponents/components/private/Application/src/UIApplication+AppExtensions.m
+WeatherApp/Pods/MaterialComponents/components/private/Color/src/MaterialColor.h
+WeatherApp/Pods/MaterialComponents/components/private/Color/src/UIColor+MaterialBlending.h
+WeatherApp/Pods/MaterialComponents/components/private/Color/src/UIColor+MaterialBlending.m
+WeatherApp/Pods/MaterialComponents/components/private/Color/src/UIColor+MaterialDynamic.h
+WeatherApp/Pods/MaterialComponents/components/private/Color/src/UIColor+MaterialDynamic.m
+WeatherApp/Pods/MaterialComponents/components/private/KeyboardWatcher/src/MaterialKeyboardWatcher.h
+WeatherApp/Pods/MaterialComponents/components/private/KeyboardWatcher/src/MDCKeyboardWatcher.h
+WeatherApp/Pods/MaterialComponents/components/private/KeyboardWatcher/src/MDCKeyboardWatcher.m
+WeatherApp/Pods/MaterialComponents/components/private/Math/src/MaterialMath.h
+WeatherApp/Pods/MaterialComponents/components/private/Math/src/MaterialMathDummy.m
+WeatherApp/Pods/MaterialComponents/components/private/Math/src/MDCMath.h
+WeatherApp/Pods/MaterialComponents/components/private/Overlay/src/MaterialOverlay.h
+WeatherApp/Pods/MaterialComponents/components/private/Overlay/src/MDCOverlayImplementor.h
+WeatherApp/Pods/MaterialComponents/components/private/Overlay/src/MDCOverlayObserver.h
+WeatherApp/Pods/MaterialComponents/components/private/Overlay/src/MDCOverlayObserver.m
+WeatherApp/Pods/MaterialComponents/components/private/Overlay/src/MDCOverlayTransitioning.h
+WeatherApp/Pods/MaterialComponents/components/private/Overlay/src/private/MDCOverlayAnimationObserver.h
+WeatherApp/Pods/MaterialComponents/components/private/Overlay/src/private/MDCOverlayAnimationObserver.m
+WeatherApp/Pods/MaterialComponents/components/private/Overlay/src/private/MDCOverlayObserverOverlay.h
+WeatherApp/Pods/MaterialComponents/components/private/Overlay/src/private/MDCOverlayObserverOverlay.m
+WeatherApp/Pods/MaterialComponents/components/private/Overlay/src/private/MDCOverlayObserverTransition.h
+WeatherApp/Pods/MaterialComponents/components/private/Overlay/src/private/MDCOverlayObserverTransition.m
+WeatherApp/Pods/MaterialComponents/components/private/Overlay/src/private/MDCOverlayUtilities.h
+WeatherApp/Pods/MaterialComponents/components/private/Overlay/src/private/MDCOverlayUtilities.m
+WeatherApp/Pods/MaterialComponents/components/Ripple/src/MaterialRipple.h
+WeatherApp/Pods/MaterialComponents/components/Ripple/src/MDCRippleTouchController.h
+WeatherApp/Pods/MaterialComponents/components/Ripple/src/MDCRippleTouchController.m
+WeatherApp/Pods/MaterialComponents/components/Ripple/src/MDCRippleView.h
+WeatherApp/Pods/MaterialComponents/components/Ripple/src/MDCRippleView.m
+WeatherApp/Pods/MaterialComponents/components/Ripple/src/MDCStatefulRippleView.h
+WeatherApp/Pods/MaterialComponents/components/Ripple/src/MDCStatefulRippleView.m
+WeatherApp/Pods/MaterialComponents/components/Ripple/src/private/MDCRippleLayer.h
+WeatherApp/Pods/MaterialComponents/components/Ripple/src/private/MDCRippleLayer.m
+WeatherApp/Pods/MaterialComponents/components/ShadowElevations/src/MaterialShadowElevations.h
+WeatherApp/Pods/MaterialComponents/components/ShadowElevations/src/MaterialShadowElevationsDummy.m
+WeatherApp/Pods/MaterialComponents/components/ShadowElevations/src/MDCShadowElevations.h
+WeatherApp/Pods/MaterialComponents/components/ShadowLayer/src/MaterialShadowLayer.h
+WeatherApp/Pods/MaterialComponents/components/ShadowLayer/src/MDCShadowLayer.h
+WeatherApp/Pods/MaterialComponents/components/ShadowLayer/src/MDCShadowLayer.m
+WeatherApp/Pods/MaterialComponents/components/Shapes/src/MaterialShapes.h
+WeatherApp/Pods/MaterialComponents/components/Shapes/src/MDCCornerTreatment.h
+WeatherApp/Pods/MaterialComponents/components/Shapes/src/MDCCornerTreatment.m
+WeatherApp/Pods/MaterialComponents/components/Shapes/src/MDCEdgeTreatment.h
+WeatherApp/Pods/MaterialComponents/components/Shapes/src/MDCEdgeTreatment.m
+WeatherApp/Pods/MaterialComponents/components/Shapes/src/MDCPathGenerator.h
+WeatherApp/Pods/MaterialComponents/components/Shapes/src/MDCPathGenerator.m
+WeatherApp/Pods/MaterialComponents/components/Shapes/src/MDCRectangleShapeGenerator.h
+WeatherApp/Pods/MaterialComponents/components/Shapes/src/MDCRectangleShapeGenerator.m
+WeatherApp/Pods/MaterialComponents/components/Shapes/src/MDCShapedShadowLayer.h
+WeatherApp/Pods/MaterialComponents/components/Shapes/src/MDCShapedShadowLayer.m
+WeatherApp/Pods/MaterialComponents/components/Shapes/src/MDCShapedView.h
+WeatherApp/Pods/MaterialComponents/components/Shapes/src/MDCShapedView.m
+WeatherApp/Pods/MaterialComponents/components/Shapes/src/MDCShapeGenerating.h
+WeatherApp/Pods/MaterialComponents/components/Snackbar/src/MaterialSnackbar.h
+WeatherApp/Pods/MaterialComponents/components/Snackbar/src/MDCSnackbarAlignment.h
+WeatherApp/Pods/MaterialComponents/components/Snackbar/src/MDCSnackbarManager.h
+WeatherApp/Pods/MaterialComponents/components/Snackbar/src/MDCSnackbarManager.m
+WeatherApp/Pods/MaterialComponents/components/Snackbar/src/MDCSnackbarMessage.h
+WeatherApp/Pods/MaterialComponents/components/Snackbar/src/MDCSnackbarMessage.m
+WeatherApp/Pods/MaterialComponents/components/Snackbar/src/MDCSnackbarMessageView.h
+WeatherApp/Pods/MaterialComponents/components/Snackbar/src/MDCSnackbarMessageView.m
+WeatherApp/Pods/MaterialComponents/components/Snackbar/src/MaterialSnackbar.bundle/Resources/en.lproj/MaterialSnackbar.strings
+WeatherApp/Pods/MaterialComponents/components/Snackbar/src/private/MaterialSnackbarStrings.h
+WeatherApp/Pods/MaterialComponents/components/Snackbar/src/private/MaterialSnackbarStrings_table.h
+WeatherApp/Pods/MaterialComponents/components/Snackbar/src/private/MDCSnackbarManagerInternal.h
+WeatherApp/Pods/MaterialComponents/components/Snackbar/src/private/MDCSnackbarMessageInternal.h
+WeatherApp/Pods/MaterialComponents/components/Snackbar/src/private/MDCSnackbarMessageViewInternal.h
+WeatherApp/Pods/MaterialComponents/components/Snackbar/src/private/MDCSnackbarOverlayView.h
+WeatherApp/Pods/MaterialComponents/components/Snackbar/src/private/MDCSnackbarOverlayView.m
+WeatherApp/Pods/MaterialComponents/components/Typography/src/MaterialTypography.h
+WeatherApp/Pods/MaterialComponents/components/Typography/src/MDCFontScaler.h
+WeatherApp/Pods/MaterialComponents/components/Typography/src/MDCFontScaler.m
+WeatherApp/Pods/MaterialComponents/components/Typography/src/MDCFontTextStyle.h
+WeatherApp/Pods/MaterialComponents/components/Typography/src/MDCTypography.h
+WeatherApp/Pods/MaterialComponents/components/Typography/src/MDCTypography.m
+WeatherApp/Pods/MaterialComponents/components/Typography/src/UIFont+MaterialScalable.h
+WeatherApp/Pods/MaterialComponents/components/Typography/src/UIFont+MaterialScalable.m
+WeatherApp/Pods/MaterialComponents/components/Typography/src/UIFont+MaterialSimpleEquality.h
+WeatherApp/Pods/MaterialComponents/components/Typography/src/UIFont+MaterialSimpleEquality.m
+WeatherApp/Pods/MaterialComponents/components/Typography/src/UIFont+MaterialTypography.h
+WeatherApp/Pods/MaterialComponents/components/Typography/src/UIFont+MaterialTypography.m
+WeatherApp/Pods/MaterialComponents/components/Typography/src/UIFontDescriptor+MaterialTypography.h
+WeatherApp/Pods/MaterialComponents/components/Typography/src/UIFontDescriptor+MaterialTypography.m
+WeatherApp/Pods/MaterialComponents/components/Typography/src/private/MDCFontTraits.h
+WeatherApp/Pods/MaterialComponents/components/Typography/src/private/MDCFontTraits.m
+WeatherApp/Pods/MaterialComponents/components/Typography/src/private/MDCTypographyUtilities.h
+WeatherApp/Pods/MaterialComponents/components/Typography/src/private/MDCTypographyUtilities.m
+WeatherApp/Pods/MaterialComponents/components/Typography/src/private/UIFont+MaterialTypographyPrivate.h
+WeatherApp/Pods/MaterialComponents/components/Typography/src/private/UIFont+MaterialTypographyPrivate.m
+WeatherApp/Pods/MDFInternationalization/LICENSE
+WeatherApp/Pods/MDFInternationalization/README.md
+WeatherApp/Pods/MDFInternationalization/Sources/MDFInternationalization.h
+WeatherApp/Pods/MDFInternationalization/Sources/MDFRTL.h
+WeatherApp/Pods/MDFInternationalization/Sources/MDFRTL.m
+WeatherApp/Pods/MDFInternationalization/Sources/NSLocale+MaterialRTL.h
+WeatherApp/Pods/MDFInternationalization/Sources/NSLocale+MaterialRTL.m
+WeatherApp/Pods/MDFInternationalization/Sources/NSString+MaterialBidi.h
+WeatherApp/Pods/MDFInternationalization/Sources/NSString+MaterialBidi.m
+WeatherApp/Pods/MDFInternationalization/Sources/UIImage+MaterialRTL.h
+WeatherApp/Pods/MDFInternationalization/Sources/UIImage+MaterialRTL.m
+WeatherApp/Pods/MDFInternationalization/Sources/UIView+MaterialRTL.h
+WeatherApp/Pods/MDFInternationalization/Sources/UIView+MaterialRTL.m
+WeatherApp/Pods/MDFTextAccessibility/LICENSE
+WeatherApp/Pods/MDFTextAccessibility/README.md
+WeatherApp/Pods/MDFTextAccessibility/src/MDFTextAccessibility-Bridging-Header.h
+WeatherApp/Pods/MDFTextAccessibility/src/MDFTextAccessibility.h
+WeatherApp/Pods/MDFTextAccessibility/src/MDFTextAccessibility.m
+WeatherApp/Pods/MDFTextAccessibility/src/private/MDFColorCalculations.h
+WeatherApp/Pods/MDFTextAccessibility/src/private/MDFColorCalculations.m
+WeatherApp/Pods/MDFTextAccessibility/src/private/MDFImageCalculations.h
+WeatherApp/Pods/MDFTextAccessibility/src/private/MDFImageCalculations.m
+WeatherApp/Pods/MDFTextAccessibility/src/private/NSArray+MDFUtils.h
+WeatherApp/Pods/MDFTextAccessibility/src/private/NSArray+MDFUtils.m
+WeatherApp/Pods/Pods.xcodeproj/xcuserdata/mateuszskalkowski.xcuserdatad/xcschemes/MaterialComponents.xcscheme
+WeatherApp/Pods/Pods.xcodeproj/xcuserdata/mateuszskalkowski.xcuserdatad/xcschemes/MDFInternationalization.xcscheme
+WeatherApp/Pods/Pods.xcodeproj/xcuserdata/mateuszskalkowski.xcuserdatad/xcschemes/MDFTextAccessibility.xcscheme
+WeatherApp/Pods/Target Support Files/MaterialComponents/MaterialComponents-dummy.m
+WeatherApp/Pods/Target Support Files/MaterialComponents/MaterialComponents-Info.plist
+WeatherApp/Pods/Target Support Files/MaterialComponents/MaterialComponents-prefix.pch
+WeatherApp/Pods/Target Support Files/MaterialComponents/MaterialComponents-umbrella.h
+WeatherApp/Pods/Target Support Files/MaterialComponents/MaterialComponents.modulemap
+WeatherApp/Pods/Target Support Files/MaterialComponents/MaterialComponents.xcconfig
+WeatherApp/Pods/Target Support Files/MDFInternationalization/MDFInternationalization-dummy.m
+WeatherApp/Pods/Target Support Files/MDFInternationalization/MDFInternationalization-Info.plist
+WeatherApp/Pods/Target Support Files/MDFInternationalization/MDFInternationalization-prefix.pch
+WeatherApp/Pods/Target Support Files/MDFInternationalization/MDFInternationalization-umbrella.h
+WeatherApp/Pods/Target Support Files/MDFInternationalization/MDFInternationalization.modulemap
+WeatherApp/Pods/Target Support Files/MDFInternationalization/MDFInternationalization.xcconfig
+WeatherApp/Pods/Target Support Files/MDFTextAccessibility/MDFTextAccessibility-dummy.m
+WeatherApp/Pods/Target Support Files/MDFTextAccessibility/MDFTextAccessibility-Info.plist
+WeatherApp/Pods/Target Support Files/MDFTextAccessibility/MDFTextAccessibility-prefix.pch
+WeatherApp/Pods/Target Support Files/MDFTextAccessibility/MDFTextAccessibility-umbrella.h
+WeatherApp/Pods/Target Support Files/MDFTextAccessibility/MDFTextAccessibility.modulemap
+WeatherApp/Pods/Target Support Files/MDFTextAccessibility/MDFTextAccessibility.xcconfig
