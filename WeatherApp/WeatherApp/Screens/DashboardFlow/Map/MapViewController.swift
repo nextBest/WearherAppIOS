@@ -22,7 +22,9 @@ class MapViewController: UIViewController {
     }
     
     override func loadView() {
+        mapView.delegate = self
         view = mapView
+        
     }
     
     // MARK: Setup
@@ -34,6 +36,12 @@ class MapViewController: UIViewController {
 }
 
 extension MapViewController: MapViewDelegate {
+    func setMarker(latitude: Double, longitude: Double) {
+        mapView.clear()
+        let marker = GMSMarker(position: CLLocationCoordinate2D(latitude: latitude, longitude: longitude))
+        marker.map = mapView
+    }
+    
     func setCameraPosition(latitude: Double, longitude: Double) {
         let camera = GMSCameraPosition.camera(withLatitude: latitude, longitude: longitude, zoom: 6.0)
         mapView.camera = camera
@@ -65,4 +73,10 @@ extension MapViewController: CLLocationManagerDelegate {
         }
     }
     
+}
+
+extension MapViewController: GMSMapViewDelegate {
+    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+        presenter.tapOnMap(latitude: coordinate.latitude, longitude: coordinate.longitude)
+    }
 }

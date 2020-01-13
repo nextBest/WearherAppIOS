@@ -9,7 +9,7 @@
 import Foundation
 
 struct Location: Codable {
-    let distance: Int
+    let distance: Int?
     let title: String
     let locationType: String
     let woeid: Int
