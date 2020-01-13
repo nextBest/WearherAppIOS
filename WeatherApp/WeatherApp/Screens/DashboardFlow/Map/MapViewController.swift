@@ -36,6 +36,10 @@ class MapViewController: UIViewController {
 }
 
 extension MapViewController: MapViewDelegate {
+    func showErrorSnackBar(message: String) {
+        SnackBar.showErrorMessage(message: message)
+    }
+    
     func setMarker(latitude: Double, longitude: Double) {
         mapView.clear()
         let marker = GMSMarker(position: CLLocationCoordinate2D(latitude: latitude, longitude: longitude))

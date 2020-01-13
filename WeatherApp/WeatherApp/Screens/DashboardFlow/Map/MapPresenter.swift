@@ -12,6 +12,7 @@ import GoogleMaps
 protocol MapViewDelegate: NSObject {
     func setCameraPosition(latitude: Double, longitude: Double)
     func setMarker(latitude: Double, longitude: Double)
+    func showErrorSnackBar(message: String)
 }
 
 class MapPresenter {
@@ -36,8 +37,9 @@ class MapPresenter {
         weatherRepository.searchLocationByCoordinates(latitude: latitude, longitude: longitude, success: { [weak self] weatherData in
             guard let srongSelf = self else { return }
             print(weatherData)
-        }) { (error) in
-            print(error)
+        }) { [weak self] error in
+            guard let strongSelf = self else { return }
+            strongSelf.view?.showErrorSnackBar(message: error.localizedDescription)
         }
     }
 }
