@@ -6,4 +6,6 @@
   Copyright © 2020 Mateusz Skałkowski. All rights reserved.
 */
 
-
+// NetworkError
+"NetworkError.connectionError" = "Connection error";
+"NetworkError.error" = "There was a problem. Try again later";

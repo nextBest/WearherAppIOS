@@ -27,5 +27,8 @@ extension Localized where Self: RawRepresentable, Self.RawValue == String {
 }
 
 enum Localizable {
-    
+    enum NetworkError: String, Localized {
+        case connectionError
+        case error
+    }
 }

@@ -12,4 +12,13 @@ enum NetworkError: Error {
     case connectionError
     case parseError
     case defaultError
+    
+    var message: String {
+        switch self {
+        case .connectionError:
+            return Localizable.NetworkError.connectionError.text
+        default:
+            return Localizable.NetworkError.error.text
+        }
+    }
 }
