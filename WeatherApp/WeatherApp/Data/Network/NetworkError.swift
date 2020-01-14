@@ -12,6 +12,7 @@ enum NetworkError: Error {
     case connectionError
     case parseError
     case defaultError
+    case noDataError
     
     var message: String {
         switch self {

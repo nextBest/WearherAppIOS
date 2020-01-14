@@ -10,9 +10,9 @@ import Foundation
 import Alamofire
 
 protocol WeatherApi {
-    func searchLocationByText(locationTextParams: LocationTextParams, success: @escaping (LocationList) -> Void, fail: @escaping (AFError) -> Void)
-    func searchLocationByCoordinates(locationParams: LocationParams, success: @escaping (LocationList) -> Void, fail: @escaping (AFError) -> Void)
-    func getWeather(woeid: String, success: @escaping (WeatherData) -> Void, fail: @escaping (AFError) -> Void)
+    func searchLocationByText(locationTextParams: LocationTextParams, success: @escaping (LocationList) -> Void, fail: @escaping (NetworkError) -> Void)
+    func searchLocationByCoordinates(locationParams: LocationParams, success: @escaping (LocationList) -> Void, fail: @escaping (NetworkError) -> Void)
+    func getWeather(woeid: String, success: @escaping (WeatherData) -> Void, fail: @escaping (NetworkError) -> Void)
     func getWeatherForSpecificDay()
 }
 
@@ -23,7 +23,7 @@ class WeatherApiImpl: WeatherApi {
         self.requestManager = requestManager
     }
     
-    func getWeather(woeid: String, success: @escaping (WeatherData) -> Void, fail: @escaping (AFError) -> Void) {
+    func getWeather(woeid: String, success: @escaping (WeatherData) -> Void, fail: @escaping (NetworkError) -> Void) {
         requestManager.makeRequest(router: .location(woeid: woeid), resultType: WeatherData.self, success: success, fail: fail)
     }
     
@@ -31,11 +31,11 @@ class WeatherApiImpl: WeatherApi {
         
     }
     
-    func searchLocationByText(locationTextParams: LocationTextParams, success: @escaping (LocationList) -> Void, fail: @escaping (AFError) -> Void) {
+    func searchLocationByText(locationTextParams: LocationTextParams, success: @escaping (LocationList) -> Void, fail: @escaping (NetworkError) -> Void) {
         requestManager.makeRequest(router: .locationSearch(parameters: locationTextParams), resultType: LocationList.self, success: success, fail: fail)
     }
     
-    func searchLocationByCoordinates(locationParams: LocationParams, success: @escaping (LocationList) -> Void, fail: @escaping (AFError) -> Void) {
+    func searchLocationByCoordinates(locationParams: LocationParams, success: @escaping (LocationList) -> Void, fail: @escaping (NetworkError) -> Void) {
         requestManager.makeRequest(router: .locationSearchLatLong(parameters: locationParams), resultType: LocationList.self, success: success, fail: fail)
     }
 }

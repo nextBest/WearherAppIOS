@@ -12,7 +12,7 @@ import Alamofire
 class RequestManager {
     private let sessionManager = Session()
     
-    func makeRequest<T>(router: ApiRouter, resultType: T.Type, success: @escaping (T) -> Void, fail: @escaping (AFError) -> Void) where T: Codable {
+    func makeRequest<T>(router: ApiRouter, resultType: T.Type, success: @escaping (T) -> Void, fail: @escaping (NetworkError) -> Void) where T: Codable {
         // TODO add interceptor
         sessionManager.request(router, interceptor: nil).validate().response { (response) in
             switch response.result {
@@ -26,10 +26,12 @@ class RequestManager {
                     success(data)
                 } catch let error {
                     print("===Parse error===", error)
+                    fail(.parseError)
                     
                 }
             case .failure(let error):
-                fail(error)
+                print(error)
+                fail(.defaultError)
             }
         }
     }
