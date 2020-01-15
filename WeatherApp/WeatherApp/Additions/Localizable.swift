@@ -30,5 +30,6 @@ enum Localizable {
     enum NetworkError: String, Localized {
         case connectionError
         case error
+        case noLocationFound
     }
 }

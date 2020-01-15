@@ -39,7 +39,7 @@ class MapPresenter {
             print(weatherData)
         }) { [weak self] error in
             guard let strongSelf = self else { return }
-            strongSelf.view?.showErrorSnackBar(message: error.localizedDescription)
+            strongSelf.view?.showErrorSnackBar(message: error.message)
         }
     }
 }

@@ -25,7 +25,7 @@ class WeatherRepositoryImpl: WeatherRepository {
     func searchLocationByCoordinates(latitude: Double, longitude: Double, success: @escaping (WeatherData) -> Void, fail: @escaping (NetworkError) -> Void) {
         weatherApi.searchLocationByCoordinates(locationParams: LocationParams(lattlong: String(latitude) + "," + String(longitude)), success: { locationList in
             guard let nearestLocation = self.nearestLocation(locationList: locationList) else {
-                fail(.noDataError)
+                fail(.noLocationFound)
                 return
             }
             self.getWeatherInfo(woeid: nearestLocation.woeid, success: success, fail: fail)
