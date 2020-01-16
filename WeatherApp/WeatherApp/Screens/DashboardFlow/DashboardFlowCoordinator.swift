@@ -28,10 +28,17 @@ class DashboardFlowCoordinator: Coordinator {
     }
     
     private func createTabBarItems() -> [UIViewController] {
-        let mapViewController = DashboardFlowFactory.makeMapViewController(weatherRepository: weatherRepository)
+        let mapViewController = DashboardFlowFactory.makeMapViewController(weatherRepository: weatherRepository, delegate: self)
         mapViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .topRated, tag: 0)
         let searchViewController = DashboardFlowFactory.makeSearchViewController()
         searchViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 1)
         return [mapViewController, searchViewController]
+    }
+}
+
+// MARK: - MapPresenterDelegate
+extension DashboardFlowCoordinator: MapPresenterDelegate {
+    func openWeatherDetailsScreen(weatherData: WeatherData) {
+        // TODO implement show weather details screen
     }
 }
