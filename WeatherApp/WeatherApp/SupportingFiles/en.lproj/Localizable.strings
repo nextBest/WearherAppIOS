@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  WeatherApp
+
+  Created by Mateusz Skalkowski on 13/01/2020.
+  Copyright © 2020 Mateusz Skałkowski. All rights reserved.
+*/
+
+// NetworkError
+"NetworkError.connectionError" = "Connection error";
+"NetworkError.error" = "There was a problem. Try again later";
+"NetworkError.noLocationFound" = "Location not found";

@@ -10,9 +10,12 @@ import UIKit
 
 class AppCoordinator: Coordinator {
     private let router: Router
+    private let requestManager = RequestManager()
+    private let weatherRepository: WeatherRepository
     
     override init() {
         self.router = Router(rootController: AppCoordinator.makeRootViewControllerWithKeyAndVisible())
+        self.weatherRepository = WeatherRepositoryImpl(weatherApi: WeatherApiImpl(requestManager: requestManager))
     }
     
     override func start() {
@@ -24,7 +27,7 @@ class AppCoordinator: Coordinator {
     }
     
     private func runDashboardFlow() {
-        let coordinator = DashboardFlowCoordinator(router: router)
+        let coordinator = DashboardFlowCoordinator(router: router, weatherRepository: weatherRepository)
         coordinator.finishFlow = { [unowned self] coordinator in
             self.removeCoordinator(coordinator)
         }

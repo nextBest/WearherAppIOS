@@ -10,10 +10,10 @@ import Foundation
 import Alamofire
 
 enum ApiRouter: URLRequestConvertible {
-    case locationSearch
-    case locationSearchLatLong
-    case location
-    case locationDay
+    case locationSearch(parameters: LocationTextParams)
+    case locationSearchLatLong(parameters: LocationParams)
+    case location(woeid: String)
+    case locationDay(woeid: String, date: String)
     
     static let baseUrlString = "https://www.metaweather.com/api/"
     
@@ -28,10 +28,10 @@ enum ApiRouter: URLRequestConvertible {
         switch self {
         case .locationSearch, .locationSearchLatLong:
             return "location/search/"
-        case .location:
-            return "location/(woeid)/"
-        case.locationDay:
-            return "location/(woeid)/(date)/"
+        case .location(let woeid):
+            return "location/\(woeid)/"
+        case.locationDay(let woeid, let date):
+            return "location/\(woeid)/\(date)/"
         }
     }
     
@@ -40,6 +40,14 @@ enum ApiRouter: URLRequestConvertible {
         
         var urlRequest = URLRequest(url: url.appendingPathComponent(path))
         urlRequest.httpMethod = method.rawValue
-        return urlRequest
+        switch self {
+        case .locationSearchLatLong(let params):
+            return try URLEncodedFormParameterEncoder.default.encode(params, into: urlRequest)
+        case .locationSearch(let params):
+            return try URLEncodedFormParameterEncoder.default.encode(params, into: urlRequest)
+        default:
+            return urlRequest
+        }
+        
     }
 }

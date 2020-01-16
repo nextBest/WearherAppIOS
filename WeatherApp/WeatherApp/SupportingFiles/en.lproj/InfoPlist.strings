@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  WeatherApp
+
+  Created by Mateusz Skalkowski on 16/01/2020.
+  Copyright © 2020 Mateusz Skałkowski. All rights reserved.
+*/
+
+"NSLocationWhenInUseUsageDescription" = "Need location to move map to your position";
