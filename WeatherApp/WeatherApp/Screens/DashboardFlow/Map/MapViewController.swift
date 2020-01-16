@@ -35,6 +35,7 @@ class MapViewController: UIViewController {
     }
 }
 
+// MARK: - MapViewDelegate
 extension MapViewController: MapViewDelegate {
     func showErrorSnackBar(message: String) {
         SnackBar.showErrorMessage(message: message)
@@ -52,6 +53,7 @@ extension MapViewController: MapViewDelegate {
     }
 }
 
+// MARK: - CLLocationManagerDelegate
 extension MapViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first {
@@ -79,6 +81,7 @@ extension MapViewController: CLLocationManagerDelegate {
     
 }
 
+// MARK: - GMSMapViewDelegate
 extension MapViewController: GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
         presenter.tapOnMap(latitude: coordinate.latitude, longitude: coordinate.longitude)
