@@ -22,6 +22,7 @@ class SearchViewController: UIViewController {
     private func setupTableView() {
         tableView.tableFooterView = UIView()
         tableView.dataSource = self
+        tableView.register(CityViewCell.self)
     }
     
 }
@@ -38,7 +39,9 @@ extension SearchViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell: CityViewCell = tableView.dequeueReusableCell(for: indexPath)
+        cell.configure()
+        return cell
     }
     
 }

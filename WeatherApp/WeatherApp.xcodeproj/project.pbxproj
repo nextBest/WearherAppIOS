@@ -22,6 +22,8 @@
 		C276C37B23D059060042C6F1 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C276C37A23D059060042C6F1 /* SearchPresenter.swift */; };
 		C276C37D23D0A7CE0042C6F1 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C276C37C23D0A7CE0042C6F1 /* UITableView+Extension.swift */; };
 		C276C37F23D0A92E0042C6F1 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C276C37E23D0A92E0042C6F1 /* UITableViewCell+Extension.swift */; };
+		C276C38523D0B1820042C6F1 /* CityViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C276C38323D0B1820042C6F1 /* CityViewCell.swift */; };
+		C276C38623D0B1820042C6F1 /* CityViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C276C38423D0B1820042C6F1 /* CityViewCell.xib */; };
 		C27ACE6323CC685E00D36443 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27ACE6223CC685E00D36443 /* Weather.swift */; };
 		C27ACE6623CC9DC300D36443 /* SnackBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27ACE6523CC9DC300D36443 /* SnackBar.swift */; };
 		C27ACE6823CCC01A00D36443 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27ACE6723CCC01A00D36443 /* NetworkError.swift */; };
@@ -65,6 +67,8 @@
 		C276C37A23D059060042C6F1 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
 		C276C37C23D0A7CE0042C6F1 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		C276C37E23D0A92E0042C6F1 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		C276C38323D0B1820042C6F1 /* CityViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewCell.swift; sourceTree = "<group>"; };
+		C276C38423D0B1820042C6F1 /* CityViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityViewCell.xib; sourceTree = "<group>"; };
 		C27ACE6223CC685E00D36443 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		C27ACE6523CC9DC300D36443 /* SnackBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackBar.swift; sourceTree = "<group>"; };
 		C27ACE6723CCC01A00D36443 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -189,6 +193,15 @@
 			path = DataSource;
 			sourceTree = "<group>";
 		};
+		C276C38023D0B0CE0042C6F1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C276C38323D0B1820042C6F1 /* CityViewCell.swift */,
+				C276C38423D0B1820042C6F1 /* CityViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		C27ACE6423CC9DAC00D36443 /* Additions */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,6 +287,7 @@
 		C2F426B923C490630052CF22 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				C276C38023D0B0CE0042C6F1 /* View */,
 				C2F426BA23C4908A0052CF22 /* SearchViewController.swift */,
 				C276C37A23D059060042C6F1 /* SearchPresenter.swift */,
 			);
@@ -363,6 +377,7 @@
 				5C42C59F23AEBD770045047E /* LaunchScreen.storyboard in Resources */,
 				C27ACE6B23CCC36300D36443 /* Localizable.strings in Resources */,
 				5C42C59C23AEBD770045047E /* Assets.xcassets in Resources */,
+				C276C38623D0B1820042C6F1 /* CityViewCell.xib in Resources */,
 				C2C7EB5A23BF44AA00977DD6 /* Dashboard.storyboard in Resources */,
 				C276C37623D0511F0042C6F1 /* InfoPlist.strings in Resources */,
 			);
@@ -462,6 +477,7 @@
 				C2576D3723CDB30A00F87C62 /* Localizable.swift in Sources */,
 				C27B318E23C881FB00BAE746 /* Location.swift in Sources */,
 				C27B319223C8BFF100BAE746 /* LocationTextParams.swift in Sources */,
+				C276C38523D0B1820042C6F1 /* CityViewCell.swift in Sources */,
 				C27ACE6823CCC01A00D36443 /* NetworkError.swift in Sources */,
 				C2755B8623C5B24400D1E5F6 /* WeatherApi.swift in Sources */,
 				C2F426BB23C4908A0052CF22 /* SearchViewController.swift in Sources */,
