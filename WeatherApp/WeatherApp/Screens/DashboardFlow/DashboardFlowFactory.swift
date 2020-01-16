@@ -16,8 +16,10 @@ enum DashboardFlowFactory {
         return mapViewController
     }
     
-    static func makeSearchViewController() -> SearchViewController {
+    static func makeSearchViewController(weatherRepository: WeatherRepository, delegate: SearchPresenterDelegate) -> SearchViewController {
         let searchViewController = SearchViewController.controllerFromStoryboard(.dashboard)
+        let searchPresenter = SearchPresenter(weatherRepository: weatherRepository, view: searchViewController, delegate: delegate)
+        searchViewController.presenter = searchPresenter
         return searchViewController
     }
 }

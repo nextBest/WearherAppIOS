@@ -16,7 +16,7 @@ protocol MapViewDelegate: AnyObject {
 }
 
 protocol MapPresenterDelegate: AnyObject {
-    func openWeatherDetailsScreen(weatherData: WeatherData)
+    func weatherDetailsFindForLocation(weatherData: WeatherData)
 }
 
 class MapPresenter {

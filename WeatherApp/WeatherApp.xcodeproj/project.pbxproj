@@ -19,6 +19,7 @@
 		C2755B8A23C5B9BD00D1E5F6 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2755B8923C5B9BD00D1E5F6 /* RequestManager.swift */; };
 		C2755B8C23C5E0EB00D1E5F6 /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2755B8B23C5E0EB00D1E5F6 /* MapPresenter.swift */; };
 		C276C37623D0511F0042C6F1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C276C37823D0511F0042C6F1 /* InfoPlist.strings */; };
+		C276C37B23D059060042C6F1 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C276C37A23D059060042C6F1 /* SearchPresenter.swift */; };
 		C27ACE6323CC685E00D36443 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27ACE6223CC685E00D36443 /* Weather.swift */; };
 		C27ACE6623CC9DC300D36443 /* SnackBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27ACE6523CC9DC300D36443 /* SnackBar.swift */; };
 		C27ACE6823CCC01A00D36443 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27ACE6723CCC01A00D36443 /* NetworkError.swift */; };
@@ -59,6 +60,7 @@
 		C2755B8B23C5E0EB00D1E5F6 /* MapPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenter.swift; sourceTree = "<group>"; };
 		C276C37723D0511F0042C6F1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C276C37923D051250042C6F1 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C276C37A23D059060042C6F1 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
 		C27ACE6223CC685E00D36443 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		C27ACE6523CC9DC300D36443 /* SnackBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackBar.swift; sourceTree = "<group>"; };
 		C27ACE6723CCC01A00D36443 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				C2F426BA23C4908A0052CF22 /* SearchViewController.swift */,
+				C276C37A23D059060042C6F1 /* SearchPresenter.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 				C27ACE6323CC685E00D36443 /* Weather.swift in Sources */,
 				5C42C59323AEBD750045047E /* AppDelegate.swift in Sources */,
 				C2C7EB5F23BF596200977DD6 /* AppCoordinator.swift in Sources */,
+				C276C37B23D059060042C6F1 /* SearchPresenter.swift in Sources */,
 				C2C7EB6523BF77FF00977DD6 /* DashboardFlowCoordinator.swift in Sources */,
 				C27B319623C8C61400BAE746 /* Source.swift in Sources */,
 				C2C7EB5823BF449200977DD6 /* Storyboard.swift in Sources */,

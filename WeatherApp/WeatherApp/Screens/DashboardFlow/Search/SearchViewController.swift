@@ -10,8 +10,15 @@ import UIKit
 
 class SearchViewController: UIViewController {
     
+    var presenter: SearchPresenter!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+}
+
+// MARK: - SearchViewDelegate
+extension SearchViewController: SearchViewDelegate {
     
 }
