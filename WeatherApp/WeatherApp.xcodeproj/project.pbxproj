@@ -20,6 +20,8 @@
 		C2755B8C23C5E0EB00D1E5F6 /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2755B8B23C5E0EB00D1E5F6 /* MapPresenter.swift */; };
 		C276C37623D0511F0042C6F1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C276C37823D0511F0042C6F1 /* InfoPlist.strings */; };
 		C276C37B23D059060042C6F1 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C276C37A23D059060042C6F1 /* SearchPresenter.swift */; };
+		C276C37D23D0A7CE0042C6F1 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C276C37C23D0A7CE0042C6F1 /* UITableView+Extension.swift */; };
+		C276C37F23D0A92E0042C6F1 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C276C37E23D0A92E0042C6F1 /* UITableViewCell+Extension.swift */; };
 		C27ACE6323CC685E00D36443 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27ACE6223CC685E00D36443 /* Weather.swift */; };
 		C27ACE6623CC9DC300D36443 /* SnackBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27ACE6523CC9DC300D36443 /* SnackBar.swift */; };
 		C27ACE6823CCC01A00D36443 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27ACE6723CCC01A00D36443 /* NetworkError.swift */; };
@@ -61,6 +63,8 @@
 		C276C37723D0511F0042C6F1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C276C37923D051250042C6F1 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C276C37A23D059060042C6F1 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
+		C276C37C23D0A7CE0042C6F1 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		C276C37E23D0A92E0042C6F1 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		C27ACE6223CC685E00D36443 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		C27ACE6523CC9DC300D36443 /* SnackBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackBar.swift; sourceTree = "<group>"; };
 		C27ACE6723CCC01A00D36443 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -261,6 +265,8 @@
 			children = (
 				C2C7EB6923BF799600977DD6 /* UIViewController+Extension.swift */,
 				C2576D3823CDB48200F87C62 /* Localizable+UIView+Extension.swift */,
+				C276C37C23D0A7CE0042C6F1 /* UITableView+Extension.swift */,
+				C276C37E23D0A92E0042C6F1 /* UITableViewCell+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -460,8 +466,10 @@
 				C2755B8623C5B24400D1E5F6 /* WeatherApi.swift in Sources */,
 				C2F426BB23C4908A0052CF22 /* SearchViewController.swift in Sources */,
 				C2C7EB6223BF776A00977DD6 /* MapViewController.swift in Sources */,
+				C276C37D23D0A7CE0042C6F1 /* UITableView+Extension.swift in Sources */,
 				C2C7EB6723BF78B500977DD6 /* DashboardFlowFactory.swift in Sources */,
 				C2C7EB5523BF43BC00977DD6 /* Router.swift in Sources */,
+				C276C37F23D0A92E0042C6F1 /* UITableViewCell+Extension.swift in Sources */,
 				C27ACE6323CC685E00D36443 /* Weather.swift in Sources */,
 				5C42C59323AEBD750045047E /* AppDelegate.swift in Sources */,
 				C2C7EB5F23BF596200977DD6 /* AppCoordinator.swift in Sources */,
