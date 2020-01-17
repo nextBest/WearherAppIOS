@@ -9,7 +9,9 @@
 import UIKit
 
 class CityViewCell: UITableViewCell {
-    func configure() {
-        
+    @IBOutlet weak var cityName: UILabel!
+    
+    func configure(location: Location) {
+        cityName.text = location.title
     }
 }

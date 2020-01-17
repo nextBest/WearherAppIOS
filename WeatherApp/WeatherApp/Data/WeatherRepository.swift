@@ -12,10 +12,11 @@ import Alamofire
 protocol WeatherRepository {
     func searchLocationByCoordinates(latitude: Double, longitude: Double, success: @escaping (WeatherData) -> Void, fail: @escaping (NetworkError) -> Void)
     func getWeatherInfo(woeid: Int, success: @escaping (WeatherData) -> Void, fail: @escaping (NetworkError) -> Void)
+    func searchCity(query: String, success: @escaping (LocationList) -> Void, fail: @escaping (NetworkError) -> Void)
 }
 
 class WeatherRepositoryImpl: WeatherRepository {
-    
+
     private let weatherApi: WeatherApi
     
     init(weatherApi: WeatherApi) {
@@ -35,6 +36,10 @@ class WeatherRepositoryImpl: WeatherRepository {
     func getWeatherInfo(woeid: Int, success: @escaping (WeatherData) -> Void, fail: @escaping (NetworkError) -> Void) {
         weatherApi.getWeather(woeid: String(woeid), success: success, fail: fail)
     }
+    
+    func searchCity(query: String, success: @escaping (LocationList) -> Void, fail: @escaping (NetworkError) -> Void) {
+        weatherApi.searchLocationByText(locationTextParams: LocationTextParams(query: query), success: success, fail: fail)
+     }
     
     func nearestLocation(locationList: LocationList) -> Location? {
         return locationList.min { (location1, location2) -> Bool in

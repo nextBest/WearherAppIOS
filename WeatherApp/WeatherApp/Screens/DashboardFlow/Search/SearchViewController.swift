@@ -12,10 +12,12 @@ class SearchViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     var presenter: SearchPresenter!
+    private var locationList: LocationList = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        presenter.viewLoaded()
     }
     
     // MARK: Setup
@@ -29,18 +31,21 @@ class SearchViewController: UIViewController {
 
 // MARK: - SearchViewDelegate
 extension SearchViewController: SearchViewDelegate {
-    
+    func showCityList(locationList: LocationList) {
+        self.locationList = locationList
+        tableView.reloadData()
+    }
 }
 
 // MARK: - UITableViewDataSource
 extension SearchViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return locationList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: CityViewCell = tableView.dequeueReusableCell(for: indexPath)
-        cell.configure()
+        cell.configure(location: locationList[indexPath.item])
         return cell
     }
     

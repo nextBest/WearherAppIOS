@@ -9,6 +9,7 @@
 import Foundation
 
 protocol SearchViewDelegate: AnyObject {
+    func showCityList(locationList: LocationList)
 }
 
 protocol SearchPresenterDelegate: AnyObject {
@@ -24,5 +25,17 @@ class SearchPresenter {
         self.weatherRepository = weatherRepository
         self.view = view
         self.delegate = delegate
+    }
+    
+    func viewLoaded() {
+        searchCity(by: "a")
+    }
+    
+    private func searchCity(by cityName: String) {
+        weatherRepository.searchCity(query: cityName, success: { [weak self] (locationList) in
+            self?.view.showCityList(locationList: locationList)
+        }) { (error) in
+            
+        }
     }
 }
