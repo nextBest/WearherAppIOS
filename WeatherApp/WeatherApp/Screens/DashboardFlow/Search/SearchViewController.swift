@@ -10,6 +10,9 @@ import UIKit
 
 class SearchViewController: UIViewController {
     
+    @IBOutlet weak var noResultsView: UIView!
+    @IBOutlet weak var connectionErrorView: UIView!
+    @IBOutlet weak var beginningView: UIView!
     @IBOutlet weak var tableView: UITableView!
     var presenter: SearchPresenter!
     private var locationList: LocationList = []
@@ -21,6 +24,7 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.viewLoaded()
         setupTableView()
     }
     
@@ -38,13 +42,34 @@ class SearchViewController: UIViewController {
         navigationController?.navigationBar.topItem?.searchController = searchController
     }
     
+    private func setupView(hideBeginningView: Bool = true, hideConnectionErrorView: Bool = true, hideNoResultsView: Bool = true,
+                           hideTableView: Bool = true) {
+        beginningView.isHidden = hideBeginningView
+        connectionErrorView.isHidden = hideConnectionErrorView
+        noResultsView.isHidden = hideNoResultsView
+        tableView.isHidden = hideTableView
+    }
+    
 }
 
 // MARK: - SearchViewDelegate
 extension SearchViewController: SearchViewDelegate {
+    func showBeginningView() {
+        setupView(hideBeginningView: false)
+    }
+    
+    func showConnectionErrorview() {
+        setupView(hideConnectionErrorView: false)
+    }
+    
+    func showNoResultsView() {
+        setupView(hideNoResultsView: false)
+    }
+    
     func showCityList(locationList: LocationList) {
         self.locationList = locationList
         tableView.reloadData()
+        setupView(hideTableView: false)
     }
 }
 

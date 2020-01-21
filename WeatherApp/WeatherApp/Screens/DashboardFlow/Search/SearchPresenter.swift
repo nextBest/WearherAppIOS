@@ -10,6 +10,9 @@ import Foundation
 
 protocol SearchViewDelegate: AnyObject {
     func showCityList(locationList: LocationList)
+    func showBeginningView()
+    func showConnectionErrorview()
+    func showNoResultsView()
 }
 
 protocol SearchPresenterDelegate: AnyObject {
@@ -27,11 +30,19 @@ class SearchPresenter {
         self.delegate = delegate
     }
     
+    func viewLoaded() {
+        view.showBeginningView()
+    }
+    
     func searchCity(by cityName: String) {
         weatherRepository.searchCity(query: cityName, success: { [weak self] (locationList) in
-            self?.view.showCityList(locationList: locationList)
-        }) { (error) in
-            
+            if locationList.isEmpty {
+                self?.view.showNoResultsView()
+            } else {
+                self?.view.showCityList(locationList: locationList)
+            }
+        }) { [weak self] (_) in
+            self?.view.showConnectionErrorview()
         }
     }
 }
