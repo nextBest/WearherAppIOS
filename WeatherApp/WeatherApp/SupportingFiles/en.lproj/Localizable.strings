@@ -10,3 +10,9 @@
 "NetworkError.connectionError" = "Connection error";
 "NetworkError.error" = "There was a problem. Try again later";
 "NetworkError.noLocationFound" = "Location not found";
+
+//Search
+"Search.title" = "Search";
+
+//Map
+"Map.title" = "Map";

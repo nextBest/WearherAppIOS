@@ -10,3 +10,9 @@
 "NetworkError.connectionError" = "Błąd połączenia";
 "NetworkError.error" = "Wystąpił problem. Spróbuj ponownie później";
 "NetworkError.noLocationFound" = "Nie znaleziono podanej lokalizacji";
+
+//Search
+"Search.title" = "Szukaj";
+
+//Map
+"Map.title" = "Mapa";

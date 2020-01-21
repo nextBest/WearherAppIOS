@@ -14,10 +14,14 @@ class SearchViewController: UIViewController {
     var presenter: SearchPresenter!
     private var locationList: LocationList = []
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupNavigationBar()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        presenter.viewLoaded()
     }
     
     // MARK: Setup
@@ -25,6 +29,13 @@ class SearchViewController: UIViewController {
         tableView.tableFooterView = UIView()
         tableView.dataSource = self
         tableView.register(CityViewCell.self)
+    }
+    
+    private func setupNavigationBar() {
+        navigationController?.navigationBar.topItem?.title = Localizable.Search.title.text
+        let searchController = UISearchController()
+        searchController.searchBar.delegate = self
+        navigationController?.navigationBar.topItem?.searchController = searchController
     }
     
 }
@@ -49,4 +60,14 @@ extension SearchViewController: UITableViewDataSource {
         return cell
     }
     
+}
+
+// MARK: - UISearchBarDelegate
+extension SearchViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let searchText = searchBar.text else {
+            return
+        }
+        presenter.searchCity(by: searchText)
+    }
 }
