@@ -41,6 +41,7 @@ class SearchViewController: UIViewController {
         let searchController = UISearchController()
         searchController.searchBar.delegate = self
         searchController.dimsBackgroundDuringPresentation = false
+        navigationItem.searchController = searchController
         navigationController?.navigationBar.topItem?.searchController = searchController
     }
     
@@ -83,6 +84,7 @@ extension SearchViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: CityViewCell = tableView.dequeueReusableCell(for: indexPath)
+        cell.delegate = self
         cell.configure(location: locationList[indexPath.item])
         return cell
     }
@@ -104,5 +106,12 @@ extension SearchViewController: UISearchBarDelegate {
 extension SearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         presenter.citySelected(woeid: locationList[indexPath.item].woeid)
+    }
+}
+
+// MARK: - CityViewCellDelegate
+extension SearchViewController: CityViewCellDelegate {
+    func showPlaceOnMap(location: Location) {
+        
     }
 }

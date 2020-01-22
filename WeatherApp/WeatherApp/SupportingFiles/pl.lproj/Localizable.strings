@@ -13,6 +13,10 @@
 
 //Search
 "Search.title" = "Szukaj";
+"Search.locationType" = "Typ lokalizacji:";
+"Search.showMore" = "Pokaż więcej";
+"Search.showLess" = "Pokaż mniej";
+"Search.showPlaceOnMap" = "Pokaż miejsce na mapie";
 
 //Map
 "Map.title" = "Mapa";
