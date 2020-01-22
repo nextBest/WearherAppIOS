@@ -39,7 +39,10 @@ class SearchPresenter {
             if locationList.isEmpty {
                 self?.view.showNoResultsView()
             } else {
-                self?.view.showCityList(locationList: locationList)
+                let sortedLocationList = locationList.sorted { (location1, location2) -> Bool in
+                    return location1.title < location2.title
+                }
+                self?.view.showCityList(locationList: sortedLocationList)
             }
         }) { [weak self] (_) in
             self?.view.showConnectionErrorview()
