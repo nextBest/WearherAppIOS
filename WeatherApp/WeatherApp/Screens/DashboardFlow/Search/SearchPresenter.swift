@@ -48,4 +48,8 @@ class SearchPresenter {
             self?.view.showConnectionErrorview()
         }
     }
+    
+    func citySelected(woeid: Int) {
+        delegate.placeFind(woeid: woeid)
+    }
 }
