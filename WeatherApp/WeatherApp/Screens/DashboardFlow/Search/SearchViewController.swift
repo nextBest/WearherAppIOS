@@ -112,6 +112,6 @@ extension SearchViewController: UITableViewDelegate {
 // MARK: - CityViewCellDelegate
 extension SearchViewController: CityViewCellDelegate {
     func showPlaceOnMap(location: Location) {
-        
+        OpenMap.forPlace(latLong: location.lattLong, placeName: location.title)
     }
 }
