@@ -83,6 +83,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMt-rd-4jL">
                                         <rect key="frame" x="183.5" y="439.5" width="47" height="30"/>
                                         <state key="normal" title="Reload"/>
+                                        <connections>
+                                            <action selector="reloadClicked:" destination="UmE-4e-POe" eventType="touchUpInside" id="5G4-JW-xgT"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

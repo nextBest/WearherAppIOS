@@ -63,6 +63,11 @@ class SearchViewController: UIViewController {
         }
     }
     
+    // MARK: User Interactions
+    @IBAction func reloadClicked(_ sender: Any) {
+        guard let searchText = navigationItem.searchController?.searchBar.text else { return }
+        presenter.searchCity(by: searchText)
+    }
 }
 
 // MARK: - SearchViewDelegate
