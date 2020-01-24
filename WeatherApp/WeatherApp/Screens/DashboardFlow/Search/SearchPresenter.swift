@@ -13,6 +13,7 @@ protocol SearchViewDelegate: AnyObject {
     func showBeginningView()
     func showConnectionErrorview()
     func showNoResultsView()
+    func showLoading()
 }
 
 protocol SearchPresenterDelegate: AnyObject {
@@ -35,6 +36,7 @@ class SearchPresenter {
     }
     
     func searchCity(by cityName: String) {
+        view.showLoading()
         weatherRepository.searchCity(query: cityName, success: { [weak self] (locationList) in
             if locationList.isEmpty {
                 self?.view.showNoResultsView()

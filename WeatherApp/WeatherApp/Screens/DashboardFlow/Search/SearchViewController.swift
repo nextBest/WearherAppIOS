@@ -14,6 +14,7 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var connectionErrorView: UIView!
     @IBOutlet weak var beginningView: UIView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var loader: UIActivityIndicatorView!
     
     var presenter: SearchPresenter!
     private var locationList: [CityCell] = []
@@ -49,17 +50,27 @@ class SearchViewController: UIViewController {
     }
     
     private func setupView(hideBeginningView: Bool = true, hideConnectionErrorView: Bool = true, hideNoResultsView: Bool = true,
-                           hideTableView: Bool = true) {
+                           hideTableView: Bool = true, hideLoader: Bool = true) {
         beginningView.isHidden = hideBeginningView
         connectionErrorView.isHidden = hideConnectionErrorView
         noResultsView.isHidden = hideNoResultsView
         tableView.isHidden = hideTableView
+        loader.isHidden = hideLoader
+        if hideLoader {
+            loader.stopAnimating()
+        } else {
+            loader.startAnimating()
+        }
     }
     
 }
 
 // MARK: - SearchViewDelegate
 extension SearchViewController: SearchViewDelegate {
+    func showLoading() {
+        setupView(hideLoader: false)
+    }
+    
     func showBeginningView() {
         setupView(hideBeginningView: false)
     }

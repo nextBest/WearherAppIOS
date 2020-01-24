@@ -97,6 +97,9 @@
                                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="wMt-rd-4jL" secondAttribute="bottom" constant="20" id="gzQ-3a-Aeo"/>
                                 </constraints>
                             </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="G38-Bh-YdR">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -107,6 +110,7 @@
                             <constraint firstItem="kfj-1W-sP3" firstAttribute="top" secondItem="pev-7w-l6v" secondAttribute="top" id="PEZ-wK-Uut"/>
                             <constraint firstItem="kkJ-LG-mBL" firstAttribute="top" secondItem="pev-7w-l6v" secondAttribute="top" id="S62-uK-WW6"/>
                             <constraint firstItem="pVQ-sa-c51" firstAttribute="leading" secondItem="pev-7w-l6v" secondAttribute="leading" id="Ups-8A-oiy"/>
+                            <constraint firstItem="G38-Bh-YdR" firstAttribute="centerY" secondItem="aHq-6A-a23" secondAttribute="centerY" id="ZT6-i5-4Dl"/>
                             <constraint firstItem="kfj-1W-sP3" firstAttribute="leading" secondItem="pev-7w-l6v" secondAttribute="leading" id="bl7-or-HL5"/>
                             <constraint firstItem="pev-7w-l6v" firstAttribute="bottom" secondItem="kkJ-LG-mBL" secondAttribute="bottom" id="eW7-pQ-Qcv"/>
                             <constraint firstItem="pVQ-sa-c51" firstAttribute="top" secondItem="pev-7w-l6v" secondAttribute="top" id="f7C-ZA-pRx"/>
@@ -115,6 +119,7 @@
                             <constraint firstItem="kkJ-LG-mBL" firstAttribute="leading" secondItem="pev-7w-l6v" secondAttribute="leading" id="koB-9N-MWF"/>
                             <constraint firstItem="pev-7w-l6v" firstAttribute="bottom" secondItem="pVQ-sa-c51" secondAttribute="bottom" id="m2E-a1-P1C"/>
                             <constraint firstItem="ndE-gd-6GS" firstAttribute="top" secondItem="pev-7w-l6v" secondAttribute="top" id="skj-Vl-BZy"/>
+                            <constraint firstItem="G38-Bh-YdR" firstAttribute="centerX" secondItem="aHq-6A-a23" secondAttribute="centerX" id="v3o-Ve-1hV"/>
                             <constraint firstItem="pev-7w-l6v" firstAttribute="trailing" secondItem="kkJ-LG-mBL" secondAttribute="trailing" id="zHc-57-lW0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pev-7w-l6v"/>
@@ -122,6 +127,7 @@
                     <connections>
                         <outlet property="beginningView" destination="ndE-gd-6GS" id="JFV-BY-TEw"/>
                         <outlet property="connectionErrorView" destination="pVQ-sa-c51" id="Dpp-Hs-eUP"/>
+                        <outlet property="loader" destination="G38-Bh-YdR" id="nOP-V8-ohh"/>
                         <outlet property="noResultsView" destination="kkJ-LG-mBL" id="qE8-u3-4S6"/>
                         <outlet property="tableView" destination="kfj-1W-sP3" id="Nik-UI-HGD"/>
                     </connections>
