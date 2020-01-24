@@ -35,6 +35,8 @@ enum Localizable {
     
     enum Search: String, Localized {
         case title
+        case showMore
+        case showLess
     }
     
     enum Map: String, Localized {

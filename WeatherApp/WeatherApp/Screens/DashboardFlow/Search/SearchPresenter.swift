@@ -9,7 +9,7 @@
 import Foundation
 
 protocol SearchViewDelegate: AnyObject {
-    func showCityList(locationList: LocationList)
+    func showCityList(locationList: [CityCell])
     func showBeginningView()
     func showConnectionErrorview()
     func showNoResultsView()
@@ -42,7 +42,11 @@ class SearchPresenter {
                 let sortedLocationList = locationList.sorted { (location1, location2) -> Bool in
                     return location1.title < location2.title
                 }
-                self?.view.showCityList(locationList: sortedLocationList)
+                var cityViewCellList: [CityCell] = []
+                for location in sortedLocationList {
+                    cityViewCellList.append(CityCell(location: location))
+                }
+                self?.view.showCityList(locationList: cityViewCellList)
             }
         }) { [weak self] (_) in
             self?.view.showConnectionErrorview()

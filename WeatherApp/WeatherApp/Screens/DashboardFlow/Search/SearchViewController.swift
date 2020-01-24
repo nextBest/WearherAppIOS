@@ -14,8 +14,9 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var connectionErrorView: UIView!
     @IBOutlet weak var beginningView: UIView!
     @IBOutlet weak var tableView: UITableView!
+    
     var presenter: SearchPresenter!
-    private var locationList: LocationList = []
+    private var locationList: [CityCell] = []
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -33,6 +34,8 @@ class SearchViewController: UIViewController {
         tableView.tableFooterView = UIView()
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = UITableView.automaticDimension
         tableView.register(CityViewCell.self)
     }
     
@@ -69,7 +72,7 @@ extension SearchViewController: SearchViewDelegate {
         setupView(hideNoResultsView: false)
     }
     
-    func showCityList(locationList: LocationList) {
+    func showCityList(locationList: [CityCell]) {
         self.locationList = locationList
         tableView.reloadData()
         setupView(hideTableView: false)
@@ -85,10 +88,9 @@ extension SearchViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: CityViewCell = tableView.dequeueReusableCell(for: indexPath)
         cell.delegate = self
-        cell.configure(location: locationList[indexPath.item])
+        cell.configure(cityCell: locationList[indexPath.item], indexPath: indexPath)
         return cell
     }
-    
 }
 
 // MARK: - UISearchBarDelegate
@@ -105,7 +107,7 @@ extension SearchViewController: UISearchBarDelegate {
 // MARK: - UITableViewDelegate
 extension SearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter.citySelected(woeid: locationList[indexPath.item].woeid)
+        presenter.citySelected(woeid: locationList[indexPath.item].location.woeid)
     }
 }
 
@@ -113,5 +115,10 @@ extension SearchViewController: UITableViewDelegate {
 extension SearchViewController: CityViewCellDelegate {
     func showPlaceOnMap(location: Location) {
         OpenMap.forPlace(latLong: location.lattLong, placeName: location.title)
+    }
+    
+    func expandCell(indexPath: IndexPath) {
+        locationList[indexPath.item].cellExpanded.toggle()
+        tableView.reloadRows(at: [indexPath], with: .automatic)
     }
 }
