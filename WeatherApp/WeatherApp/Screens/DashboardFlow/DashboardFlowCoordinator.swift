@@ -34,12 +34,22 @@ class DashboardFlowCoordinator: Coordinator {
         searchViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 1)
         return [mapViewController, searchViewController]
     }
+    
+    private func runDetailsFlow() {
+        let coordinator = DetailsFlowCoordinator(router: router, weatherRepository: weatherRepository)
+        coordinator.finishFlow = { [unowned self] coordinator in
+            self.removeCoordinator(coordinator)
+        }
+        addCoordinator(coordinator)
+        coordinator.start()
+    }
 }
 
 // MARK: - MapPresenterDelegate
 extension DashboardFlowCoordinator: MapPresenterDelegate {
     func weatherDetailsFindForLocation(weatherData: WeatherData) {
         // TODO implement show weather details screen
+        runDetailsFlow()
     }
 }
 
@@ -47,5 +57,6 @@ extension DashboardFlowCoordinator: MapPresenterDelegate {
 extension DashboardFlowCoordinator: SearchPresenterDelegate {
     func placeFind(woeid: Int) {
         // TODO open weather details screen
+        runDetailsFlow()
     }
 }
