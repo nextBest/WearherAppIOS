@@ -32,4 +32,14 @@ enum Localizable {
         case error
         case noLocationFound
     }
+    
+    enum Search: String, Localized {
+        case title
+        case showMore
+        case showLess
+    }
+    
+    enum Map: String, Localized {
+        case title
+    }
 }

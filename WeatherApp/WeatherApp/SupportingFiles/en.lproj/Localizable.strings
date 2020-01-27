@@ -10,3 +10,13 @@
 "NetworkError.connectionError" = "Connection error";
 "NetworkError.error" = "There was a problem. Try again later";
 "NetworkError.noLocationFound" = "Location not found";
+
+//Search
+"Search.title" = "Search";
+"Search.locationType" = "Location type:";
+"Search.showMore" = "Show more";
+"Search.showLess" = "Show less";
+"Search.showPlaceOnMap" = "Show place on map";
+
+//Map
+"Map.title" = "Map";

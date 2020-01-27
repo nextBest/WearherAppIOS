@@ -10,3 +10,13 @@
 "NetworkError.connectionError" = "Błąd połączenia";
 "NetworkError.error" = "Wystąpił problem. Spróbuj ponownie później";
 "NetworkError.noLocationFound" = "Nie znaleziono podanej lokalizacji";
+
+//Search
+"Search.title" = "Szukaj";
+"Search.locationType" = "Typ lokalizacji:";
+"Search.showMore" = "Pokaż więcej";
+"Search.showLess" = "Pokaż mniej";
+"Search.showPlaceOnMap" = "Pokaż miejsce na mapie";
+
+//Map
+"Map.title" = "Mapa";

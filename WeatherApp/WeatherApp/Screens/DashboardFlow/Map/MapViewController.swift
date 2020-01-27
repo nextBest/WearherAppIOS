@@ -16,6 +16,11 @@ class MapViewController: UIViewController {
     private let locationManager = CLLocationManager()
     private let mapView = GMSMapView(frame: CGRect.zero)
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupNavigationBar()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLocationManager()
@@ -32,6 +37,11 @@ class MapViewController: UIViewController {
     private func setupLocationManager() {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
+    }
+    
+    private func setupNavigationBar() {
+        tabBarController?.title = Localizable.Map.title.text
+        tabBarController?.navigationItem.searchController = nil
     }
 }
 
