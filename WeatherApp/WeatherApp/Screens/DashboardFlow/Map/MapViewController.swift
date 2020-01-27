@@ -40,8 +40,8 @@ class MapViewController: UIViewController {
     }
     
     private func setupNavigationBar() {
-        navigationController?.navigationBar.topItem?.title = Localizable.Map.title.text
-        navigationController?.navigationBar.topItem?.searchController = nil
+        tabBarController?.title = Localizable.Map.title.text
+        tabBarController?.navigationItem.searchController = nil
     }
 }
 

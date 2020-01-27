@@ -41,12 +41,11 @@ class SearchViewController: UIViewController {
     }
     
     private func setupNavigationBar() {
-        navigationController?.navigationBar.topItem?.title = Localizable.Search.title.text
-        let searchController = UISearchController()
+        tabBarController?.title = Localizable.Search.title.text
+        let searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.delegate = self
         searchController.dimsBackgroundDuringPresentation = false
-        navigationItem.searchController = searchController
-        navigationController?.navigationBar.topItem?.searchController = searchController
+        tabBarController?.navigationItem.searchController = searchController
     }
     
     private func setupView(hideBeginningView: Bool = true, hideConnectionErrorView: Bool = true, hideNoResultsView: Bool = true,
