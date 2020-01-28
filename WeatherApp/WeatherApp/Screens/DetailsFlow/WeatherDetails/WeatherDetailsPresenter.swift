@@ -15,9 +15,15 @@ protocol WeatherDetailsViewDelegate: AnyObject {
 class WeatherDetailsPresenter {
     private let weatherRepository: WeatherRepository
     private unowned let view: WeatherDetailsViewDelegate
+    private let cityName: String
+    private let woeid: Int?
+    private let weatherData: WeatherData?
     
-    init(weatherRepository: WeatherRepository, view: WeatherDetailsViewDelegate) {
+    init(weatherRepository: WeatherRepository, view: WeatherDetailsViewDelegate, cityName: String, woeid: Int? = nil, weatherData: WeatherData? = nil) {
         self.weatherRepository = weatherRepository
         self.view = view
+        self.cityName = cityName
+        self.woeid = woeid
+        self.weatherData = weatherData
     }
 }

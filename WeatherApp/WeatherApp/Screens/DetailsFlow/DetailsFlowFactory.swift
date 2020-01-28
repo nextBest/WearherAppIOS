@@ -10,9 +10,9 @@ import Foundation
 
 class DetailsFlowFactory {
     
-    static func makeWeatherDetailsViewController(weatherRepository: WeatherRepository) -> WeatherDetailsViewController {
+    static func makeWeatherDetailsViewController(weatherRepository: WeatherRepository, cityName: String, woeid: Int? = nil, weatherData: WeatherData? = nil) -> WeatherDetailsViewController {
         let weatherDetailsViewController = WeatherDetailsViewController.controllerFromStoryboard(.details)
-        let presenter = WeatherDetailsPresenter(weatherRepository: weatherRepository, view: weatherDetailsViewController)
+        let presenter = WeatherDetailsPresenter(weatherRepository: weatherRepository, view: weatherDetailsViewController, cityName: cityName, woeid: woeid, weatherData: weatherData)
         weatherDetailsViewController.presenter = presenter
         return weatherDetailsViewController
     }

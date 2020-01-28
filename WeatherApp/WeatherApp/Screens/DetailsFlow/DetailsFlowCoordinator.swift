@@ -11,10 +11,16 @@ import Foundation
 class DetailsFlowCoordinator: Coordinator {
     private let router: Router
     private let weatherRepository: WeatherRepository
+    private let cityName: String
+    private let woeid: Int?
+    private let weatherData: WeatherData?
     
-    init(router: Router, weatherRepository: WeatherRepository) {
+    init(router: Router, weatherRepository: WeatherRepository, cityName: String, woeid: Int? = nil, weatherData: WeatherData? = nil) {
         self.router = router
         self.weatherRepository = weatherRepository
+        self.cityName = cityName
+        self.woeid = woeid
+        self.weatherData = weatherData
     }
     
     override func start() {
@@ -22,7 +28,7 @@ class DetailsFlowCoordinator: Coordinator {
     }
     
     private func showWeatherDetailsVC() {
-        let weatherDetailsViewController = DetailsFlowFactory.makeWeatherDetailsViewController(weatherRepository: weatherRepository)
+        let weatherDetailsViewController = DetailsFlowFactory.makeWeatherDetailsViewController(weatherRepository: weatherRepository, cityName: cityName, woeid: woeid, weatherData: weatherData)
         router.push(weatherDetailsViewController, animated: true) { [weak self] in
             self?.finishFlow?(self)
         }

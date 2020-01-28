@@ -122,7 +122,7 @@ extension SearchViewController: UISearchBarDelegate {
 // MARK: - UITableViewDelegate
 extension SearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter.citySelected(woeid: locationList[indexPath.item].location.woeid)
+        presenter.citySelected(location: locationList[indexPath.item].location)
     }
 }
 

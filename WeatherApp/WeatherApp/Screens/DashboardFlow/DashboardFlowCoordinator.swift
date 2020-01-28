@@ -35,8 +35,8 @@ class DashboardFlowCoordinator: Coordinator {
         return [mapViewController, searchViewController]
     }
     
-    private func runDetailsFlow() {
-        let coordinator = DetailsFlowCoordinator(router: router, weatherRepository: weatherRepository)
+    private func runDetailsFlow(cityName: String, woeid: Int? = nil, weatherData: WeatherData? = nil) {
+        let coordinator = DetailsFlowCoordinator(router: router, weatherRepository: weatherRepository, cityName: cityName, woeid: woeid, weatherData: weatherData)
         coordinator.finishFlow = { [unowned self] coordinator in
             self.removeCoordinator(coordinator)
         }
@@ -47,16 +47,14 @@ class DashboardFlowCoordinator: Coordinator {
 
 // MARK: - MapPresenterDelegate
 extension DashboardFlowCoordinator: MapPresenterDelegate {
-    func weatherDetailsFindForLocation(weatherData: WeatherData) {
-        // TODO implement show weather details screen
-        runDetailsFlow()
+    func weatherDetailsFindForLocation(weatherData: WeatherData, cityName: String) {
+        runDetailsFlow(cityName: cityName, weatherData: weatherData)
     }
 }
 
 // MARK: - SearchPresenterDelegate
 extension DashboardFlowCoordinator: SearchPresenterDelegate {
-    func placeFind(woeid: Int) {
-        // TODO open weather details screen
-        runDetailsFlow()
+    func placeFind(woeid: Int, cityName: String) {
+        runDetailsFlow(cityName: cityName, woeid: woeid)
     }
 }

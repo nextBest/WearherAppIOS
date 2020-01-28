@@ -17,7 +17,7 @@ protocol SearchViewDelegate: AnyObject {
 }
 
 protocol SearchPresenterDelegate: AnyObject {
-    func placeFind(woeid: Int)
+    func placeFind(woeid: Int, cityName: String)
 }
 
 class SearchPresenter {
@@ -55,7 +55,7 @@ class SearchPresenter {
         }
     }
     
-    func citySelected(woeid: Int) {
-        delegate.placeFind(woeid: woeid)
+    func citySelected(location: Location) {
+        delegate.placeFind(woeid: location.woeid, cityName: location.title)
     }
 }
