@@ -9,7 +9,7 @@
 import Foundation
 
 protocol WeatherDetailsViewDelegate: AnyObject {
-    
+    func setTitle(title: String)
 }
 
 class WeatherDetailsPresenter {
@@ -25,5 +25,9 @@ class WeatherDetailsPresenter {
         self.cityName = cityName
         self.woeid = woeid
         self.weatherData = weatherData
+    }
+    
+    func viewLoaded() {
+        view.setTitle(title: cityName)
     }
 }
