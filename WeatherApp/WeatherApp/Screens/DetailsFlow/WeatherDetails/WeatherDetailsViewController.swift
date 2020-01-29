@@ -17,15 +17,17 @@ class WeatherDetailsViewController: UIViewController {
     @IBOutlet weak var loader: UIActivityIndicatorView!
     
     var presenter: WeatherDetailsPresenter!
+    private var tableViewCells: [Any] = []
+    private var weatherData: WeatherData?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewLoaded()
+        setupTableView()
     }
     
     // MARK: Setup
-    
-    private func setupView(hideErrorView: Bool = true, hideConnectionErrorView: Bool = true,  hideTableView: Bool = true, hideLoader: Bool = true) {
+    private func setupView(hideErrorView: Bool = true, hideConnectionErrorView: Bool = true, hideTableView: Bool = true, hideLoader: Bool = true) {
         errorView.isHidden = hideErrorView
         connectionErrorView.isHidden = hideConnectionErrorView
         tableView.isHidden = hideTableView
@@ -36,12 +38,23 @@ class WeatherDetailsViewController: UIViewController {
             loader.startAnimating()
         }
     }
+    
+    private func setupTableView() {
+        tableView.tableFooterView = UIView()
+        tableView.dataSource = self
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = UITableView.automaticDimension
+        tableView.register(WeatherHeaderTableViewCell.self)
+    }
 }
 
 // MARK: - WeatherDetailsViewDelegate
 extension WeatherDetailsViewController: WeatherDetailsViewDelegate {
     func showData(weatherData: WeatherData) {
         setupView(hideTableView: false)
+        self.weatherData = weatherData
+        tableViewCells.append(WeatherHeaderTableViewCell())
+        tableView.reloadData()
     }
     
     func showConnectionErrorview() {
@@ -60,4 +73,23 @@ extension WeatherDetailsViewController: WeatherDetailsViewDelegate {
         self.title = title
     }
     
+}
+
+// MARK: - UITableViewDataSource
+extension WeatherDetailsViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tableViewCells.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "WeatherHeaderTableViewCell", for: indexPath)
+        guard let weather = weatherData else { return cell}
+        switch cell {
+        case let weatherHeaderCell as WeatherHeaderTableViewCell:
+            weatherHeaderCell.configure(weather: weather.consolidatedWeather[0])
+        default:
+            return cell
+        }
+        return cell
+    }
 }
