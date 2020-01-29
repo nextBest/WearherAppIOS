@@ -188,6 +188,15 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
+		C23BC28123E1878000A9BB7C /* WeatherHeaderTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C2B602FC23E073A8000DD0CA /* WeatherHeaderTableViewCell.swift */,
+				C2B602FD23E073A8000DD0CA /* WeatherHeaderTableViewCell.xib */,
+			);
+			path = WeatherHeaderTableViewCell;
+			sourceTree = "<group>";
+		};
 		C240000F23DEE67800E0573E /* DetailsFlow */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,8 +282,7 @@
 		C2B602F523E0726D000DD0CA /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C2B602FC23E073A8000DD0CA /* WeatherHeaderTableViewCell.swift */,
-				C2B602FD23E073A8000DD0CA /* WeatherHeaderTableViewCell.xib */,
+				C23BC28123E1878000A9BB7C /* WeatherHeaderTableViewCell */,
 			);
 			path = View;
 			sourceTree = "<group>";

@@ -31,8 +31,8 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbN-tH-PcX">
-                        <rect key="frame" x="36" y="72" width="247.5" height="50.5"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="42"/>
+                        <rect key="frame" x="36" y="72" width="544.5" height="119.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="100"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>

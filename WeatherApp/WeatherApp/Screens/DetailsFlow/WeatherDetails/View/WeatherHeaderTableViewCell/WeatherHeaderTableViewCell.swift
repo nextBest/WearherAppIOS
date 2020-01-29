@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class WeatherHeaderTableViewCell: UITableViewCell {
 
@@ -15,6 +16,7 @@ class WeatherHeaderTableViewCell: UITableViewCell {
     @IBOutlet weak var temperatureLabel: UILabel!
     
     func configure(weather: Weather) {
+        weatherImage.sd_setImage(with: URL(string: "https://www.metaweather.com/static/img/weather/png/\(weather.weatherStateAbbr).png"), completed: nil)
         weatherStateLabel.text = weather.weatherStateName
         temperatureLabel.text = weather.theTemp.temperature()
     }
