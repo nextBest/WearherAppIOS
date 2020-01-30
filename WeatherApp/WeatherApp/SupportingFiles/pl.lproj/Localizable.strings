@@ -20,3 +20,10 @@
 
 //Map
 "Map.title" = "Mapa";
+
+//WeatherDetails
+"WeatherDetails.details" = "Informacje";
+"WeatherDetails.humidity" = "Wilgotność";
+"WeatherDetails.visibility" = "Widoczność";
+"WeatherDetails.pressure" = "Ciśnienie";
+"WeatherDetails.predictability" = "Przewidywalność";

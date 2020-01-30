@@ -17,7 +17,7 @@ class WeatherDetailsViewController: UIViewController {
     @IBOutlet weak var loader: UIActivityIndicatorView!
     
     var presenter: WeatherDetailsPresenter!
-    private var tableViewCells: [Any] = []
+    private var tableViewCells: [UITableViewCell] = []
     private var weatherData: WeatherData?
     
     override func viewDidLoad() {
@@ -45,6 +45,7 @@ class WeatherDetailsViewController: UIViewController {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = UITableView.automaticDimension
         tableView.register(WeatherHeaderTableViewCell.self)
+        tableView.register(WeatherDetailsTableViewCell.self)
     }
 }
 
@@ -54,6 +55,7 @@ extension WeatherDetailsViewController: WeatherDetailsViewDelegate {
         setupView(hideTableView: false)
         self.weatherData = weatherData
         tableViewCells.append(WeatherHeaderTableViewCell())
+        tableViewCells.append(WeatherDetailsTableViewCell())
         tableView.reloadData()
     }
     
@@ -82,14 +84,30 @@ extension WeatherDetailsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "WeatherHeaderTableViewCell", for: indexPath)
-        guard let weather = weatherData else { return cell}
-        switch cell {
-        case let weatherHeaderCell as WeatherHeaderTableViewCell:
-            weatherHeaderCell.configure(weather: weather.consolidatedWeather[0])
-        default:
-            return cell
+        let cellType = CellType.init(fromRawValue: indexPath.row)
+        switch cellType {
+        case .header:
+            let weatherHeaderCell: WeatherHeaderTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+            if let weather = weatherData {
+                weatherHeaderCell.configure(weather: weather.consolidatedWeather[0])
+            }
+            return weatherHeaderCell
+        case .details:
+            let weatherDetailsCell: WeatherDetailsTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+            return weatherDetailsCell
         }
-        return cell
+    }
+}
+
+extension WeatherDetailsViewController {
+    enum CellType: Int, CaseIterable {
+        case header
+        case details
+        
+        init(fromRawValue: Int) {
+            guard let cellType = CellType(rawValue: fromRawValue) else { fatalError("No cell")}
+            self = cellType
+        }
+        
     }
 }
