@@ -10,6 +10,6 @@ import Foundation
 
 extension Double {
     func temperature()-> String {
-        return String(format: "%.0f", self) + "°C";
+        return self.toString() + "°C";
     }
 }

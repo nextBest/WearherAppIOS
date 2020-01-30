@@ -94,6 +94,9 @@ extension WeatherDetailsViewController: UITableViewDataSource {
             return weatherHeaderCell
         case .details:
             let weatherDetailsCell: WeatherDetailsTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+            if let weather = weatherData {
+                weatherDetailsCell.configure(weather: weather.consolidatedWeather[0])
+            }
             return weatherDetailsCell
         }
     }
