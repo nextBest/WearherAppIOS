@@ -18,9 +18,9 @@ class WeatherDetailsTableViewCell: UITableViewCell {
     
     func configure(weather: Weather) {
         weatherImage.sd_setImage(with: URL(string: "https://www.metaweather.com/static/img/weather/png/\(weather.weatherStateAbbr).png"), completed: nil)
-        humidityLabel.text = weather.humidity.toString()
-        visibilityLabel.text = weather.visibility.toString()
-        pressureLabel.text = weather.airPressure.toString()
-        predictabilityLabel.text = weather.predictability.toString()
+        humidityLabel.text = weather.humidity.toString() + " %"
+        visibilityLabel.text = weather.visibility.toString() + " miles"
+        pressureLabel.text = weather.airPressure.toString() + " mBar"
+        predictabilityLabel.text = weather.predictability.toString() + " %"
     }
 }
