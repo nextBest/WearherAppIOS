@@ -17,11 +17,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weather_night" translatesAutoresizingMaskIntoConstraints="NO" id="9C9-o4-rHU">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414.00000000000011" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iOl-l4-sWH">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DW2-5N-0vO">
@@ -45,7 +45,7 @@
                             <constraint firstItem="VMa-jT-Rmu" firstAttribute="leading" secondItem="kCU-Aw-Nqu" secondAttribute="leading" id="8WE-93-zcz"/>
                             <constraint firstItem="9C9-o4-rHU" firstAttribute="top" secondItem="Tg9-MC-iXP" secondAttribute="top" id="ETr-FR-rbH"/>
                             <constraint firstItem="nj1-gg-u6g" firstAttribute="centerY" secondItem="Tg9-MC-iXP" secondAttribute="centerY" id="KAA-5P-uUY"/>
-                            <constraint firstItem="kCU-Aw-Nqu" firstAttribute="bottom" secondItem="iOl-l4-sWH" secondAttribute="bottom" id="PVg-oT-wmj"/>
+                            <constraint firstAttribute="bottom" secondItem="iOl-l4-sWH" secondAttribute="bottom" id="PVg-oT-wmj"/>
                             <constraint firstItem="kCU-Aw-Nqu" firstAttribute="bottom" secondItem="DW2-5N-0vO" secondAttribute="bottom" id="Qlb-gZ-Teo"/>
                             <constraint firstItem="nj1-gg-u6g" firstAttribute="centerX" secondItem="Tg9-MC-iXP" secondAttribute="centerX" id="REG-TC-l8h"/>
                             <constraint firstItem="kCU-Aw-Nqu" firstAttribute="trailing" secondItem="iOl-l4-sWH" secondAttribute="trailing" id="XwL-FY-i3E"/>
