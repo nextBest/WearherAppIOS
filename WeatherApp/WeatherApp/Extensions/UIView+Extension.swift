@@ -19,4 +19,12 @@ extension UIView {
             self.layer.cornerRadius = CGFloat(newValue)
         }
     }
+    
+    func loadNib() -> UIView? {
+        let nibName = type(of: self).description().components(separatedBy: ".").last!
+        let bundle = Bundle(for: type(of: self))
+        let nib = UINib(nibName: nibName, bundle: bundle)
+        return nib.instantiate(withOwner: self, options: nil).first as? UIView
+    }
+    
 }
