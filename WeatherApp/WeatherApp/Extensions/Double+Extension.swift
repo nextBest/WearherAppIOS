@@ -9,7 +9,11 @@
 import Foundation
 
 extension Double {
-    func toString()-> String {
+    func toString() -> String {
         return String(format: "%.0f", self)
+    }
+    
+    func temperature() -> String {
+        return self.toString() + "°C"
     }
 }
