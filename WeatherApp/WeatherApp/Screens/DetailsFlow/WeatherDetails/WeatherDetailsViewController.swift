@@ -52,6 +52,11 @@ class WeatherDetailsViewController: UIViewController {
 
 // MARK: - WeatherDetailsViewDelegate
 extension WeatherDetailsViewController: WeatherDetailsViewDelegate {
+    
+    func setBackgroundImage(timeOfDay: TimeOfDay) {
+        background.image = timeOfDay.backgroundImage
+    }
+    
     func showData(weatherData: WeatherData) {
         setupView(hideTableView: false)
         self.weatherData = weatherData

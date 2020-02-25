@@ -14,6 +14,7 @@ protocol WeatherDetailsViewDelegate: AnyObject {
     func showError()
     func showLoading()
     func showData(weatherData: WeatherData)
+    func setBackgroundImage(timeOfDay: TimeOfDay)
 }
 
 class WeatherDetailsPresenter {
@@ -58,6 +59,7 @@ class WeatherDetailsPresenter {
     }
     
     private func showWeatherData(weatherData: WeatherData) {
+        view.setBackgroundImage(timeOfDay: weatherData.time.getTimeOfDay(timezone: weatherData.timezone))
         view.showData(weatherData: weatherData)
     }
 }

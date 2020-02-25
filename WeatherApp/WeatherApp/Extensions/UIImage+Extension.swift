@@ -6,4 +6,14 @@
 //  Copyright © 2020 Mateusz Skałkowski. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+extension UIImage {
+    class var bgNight: UIImage {
+        return UIImage(named: "bg_night")!
+    }
+    
+    class var bgDay: UIImage {
+        return UIImage(named: "bg_day")!
+    }
+}
