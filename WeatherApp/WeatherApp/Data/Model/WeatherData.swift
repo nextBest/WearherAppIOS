@@ -10,9 +10,9 @@ import Foundation
 
 struct WeatherData: Codable {
     let consolidatedWeather: [Weather]
-    let time: String
-    let sunRise: String
-    let sunSet: String
+    let time: Date
+    let sunRise: Date
+    let sunSet: Date
     let timezoneName: String
     let parent: Location
     let sources: [Source]

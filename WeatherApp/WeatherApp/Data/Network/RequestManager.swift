@@ -21,9 +21,26 @@ class RequestManager {
                 }
                 
                 do {
-                    let data = try JSONDecoder().decode(resultType, from: data)
+                    let jsonDecoder = JSONDecoder()
+                    jsonDecoder.dateDecodingStrategy = .custom({ (decoder) -> Date in
+                        guard let container = try? decoder.singleValueContainer(),
+                            let text = try? container.decode(String.self) else {
+                                throw DecodingError.dataCorrupted(DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Could not decode date text"))}
+                        let dateFormatter = DateFormatter()
+                        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSX"
+                        if let date = dateFormatter.date(from: text) {
+                            return date
+                        }
+                        dateFormatter.dateFormat = "yyyy-MM-dd"
+                        if let date = dateFormatter.date(from: text) {
+                            return date
+                        }
+                        return Date()
+                    })
+                    let data = try jsonDecoder.decode(resultType, from: data)
                     success(data)
-                } catch _ {
+                } catch let error {
+                    print("ParseError: \(error.localizedDescription)")
                     fail(.parseError)
                 }
             case .failure(let error):
