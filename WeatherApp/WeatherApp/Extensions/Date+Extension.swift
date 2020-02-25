@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 extension Date {
     
@@ -16,8 +17,9 @@ extension Date {
         return dateFormatter.string(from: self)
     }
     
-    func getTimeOfDay() -> TimeOfDay {
-        let calendar = Calendar.current
+    func getTimeOfDay(timezone: String) -> TimeOfDay {
+        var calendar = Calendar.current
+        calendar.timeZone =  TimeZone(identifier: timezone)!
         let dateComponents = calendar.dateComponents([.hour], from: self)
         guard let hour = dateComponents.hour else { return .day }
         switch hour {
@@ -27,9 +29,18 @@ extension Date {
             return .night
         }
     }
+}
+
+enum TimeOfDay {
+    case day
+    case night
     
-    enum TimeOfDay {
-        case day
-        case night
+    var backgroundImage: UIImage {
+        switch self {
+        case .day:
+            return UIImage.bgDay
+        case .night:
+            return UIImage.bgNight
+        }
     }
 }
