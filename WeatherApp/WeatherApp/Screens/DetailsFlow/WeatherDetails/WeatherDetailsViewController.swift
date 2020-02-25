@@ -46,6 +46,7 @@ class WeatherDetailsViewController: UIViewController {
         tableView.estimatedRowHeight = UITableView.automaticDimension
         tableView.register(WeatherHeaderTableViewCell.self)
         tableView.register(WeatherDetailsTableViewCell.self)
+        tableView.register(WeatherForecastTableViewCell.self)
     }
 }
 
@@ -56,6 +57,7 @@ extension WeatherDetailsViewController: WeatherDetailsViewDelegate {
         self.weatherData = weatherData
         tableViewCells.append(WeatherHeaderTableViewCell())
         tableViewCells.append(WeatherDetailsTableViewCell())
+        tableViewCells.append(WeatherForecastTableViewCell())
         tableView.reloadData()
     }
     
@@ -98,6 +100,12 @@ extension WeatherDetailsViewController: UITableViewDataSource {
                 weatherDetailsCell.configure(weather: weather.consolidatedWeather[0])
             }
             return weatherDetailsCell
+        case .forecast:
+            let weatherForecastCell: WeatherForecastTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+            if let weather = weatherData {
+                weatherForecastCell.configure(weatherList: weather.consolidatedWeather)
+            }
+            return weatherForecastCell
         }
     }
 }
@@ -106,6 +114,7 @@ extension WeatherDetailsViewController {
     enum CellType: Int, CaseIterable {
         case header
         case details
+        case forecast
         
         init(fromRawValue: Int) {
             guard let cellType = CellType(rawValue: fromRawValue) else { fatalError("No cell")}
