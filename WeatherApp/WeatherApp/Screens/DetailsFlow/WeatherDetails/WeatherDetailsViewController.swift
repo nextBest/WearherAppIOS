@@ -47,6 +47,7 @@ class WeatherDetailsViewController: UIViewController {
         tableView.register(WeatherHeaderTableViewCell.self)
         tableView.register(WeatherDetailsTableViewCell.self)
         tableView.register(WeatherForecastTableViewCell.self)
+        tableView.register(WeatherTimeTableViewCell.self)
     }
 }
 
@@ -63,6 +64,7 @@ extension WeatherDetailsViewController: WeatherDetailsViewDelegate {
         tableViewCells.append(WeatherHeaderTableViewCell())
         tableViewCells.append(WeatherDetailsTableViewCell())
         tableViewCells.append(WeatherForecastTableViewCell())
+        tableViewCells.append(WeatherTimeTableViewCell())
         tableView.reloadData()
     }
     
@@ -111,6 +113,9 @@ extension WeatherDetailsViewController: UITableViewDataSource {
                 weatherForecastCell.configure(weatherList: weather.consolidatedWeather)
             }
             return weatherForecastCell
+        case .time:
+            let weatherTimeCell: WeatherTimeTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+            return weatherTimeCell
         }
     }
 }
@@ -120,6 +125,7 @@ extension WeatherDetailsViewController {
         case header
         case details
         case forecast
+        case time
         
         init(fromRawValue: Int) {
             guard let cellType = CellType(rawValue: fromRawValue) else { fatalError("No cell")}
