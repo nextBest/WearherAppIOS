@@ -28,3 +28,4 @@
 "WeatherDetails.pressure" = "Pressure";
 "WeatherDetails.predictability" = "Predictability";
 "WeatherDetails.forecast" = "Forecast";
+"WeatherDetails.time" = "Time and sun";

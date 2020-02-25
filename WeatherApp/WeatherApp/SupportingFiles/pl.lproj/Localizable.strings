@@ -28,3 +28,4 @@
 "WeatherDetails.pressure" = "Ciśnienie";
 "WeatherDetails.predictability" = "Przewidywalność";
 "WeatherDetails.forecast" = "Prognoza";
+"WeatherDetails.time" = "Czas i słońce";
