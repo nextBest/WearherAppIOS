@@ -27,3 +27,4 @@
 "WeatherDetails.visibility" = "Widoczność";
 "WeatherDetails.pressure" = "Ciśnienie";
 "WeatherDetails.predictability" = "Przewidywalność";
+"WeatherDetails.forecast" = "Prognoza";
