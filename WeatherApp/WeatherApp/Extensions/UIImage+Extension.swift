@@ -16,4 +16,8 @@ extension UIImage {
     class var bgDay: UIImage {
         return UIImage(named: "bg_day")!
     }
+    
+    class var sky: UIImage {
+        return UIImage(named: "sky")!
+    }
 }

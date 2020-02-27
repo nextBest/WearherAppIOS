@@ -17,6 +17,23 @@ extension Date {
         return dateFormatter.string(from: self)
     }
     
+    func getMinuteOfDay(timezone: String) -> Int {
+        let minutesInHour = 60
+        var calendar = Calendar.current
+        calendar.timeZone = TimeZone(identifier: timezone)!
+        let dateComponents = calendar.dateComponents([.hour, .minute], from: self)
+        guard let hour = dateComponents.hour else { return 0 }
+        guard let minute = dateComponents.minute else { return 0 }
+        return ( hour * minutesInHour) + minute
+    }
+    
+    func toHour(timezone: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = TimeZone(identifier: timezone)!
+        dateFormatter.dateFormat = "HH:mm"
+        return dateFormatter.string(from: self)
+    }
+    
     func getTimeOfDay(timezone: String) -> TimeOfDay {
         var calendar = Calendar.current
         calendar.timeZone =  TimeZone(identifier: timezone)!

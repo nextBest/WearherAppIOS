@@ -21,4 +21,10 @@ extension String {
         }
         return CLLocationCoordinate2DMake(lat, lon)
     }
+    
+    func widthWithConstrainedHeight(height: CGFloat, font: UIFont) -> CGFloat {
+        let constraintRect = CGSize(width: .greatestFiniteMagnitude, height: height)
+        let boundingBox = self.boundingRect(with: constraintRect, options: [.usesLineFragmentOrigin, .usesFontLeading], attributes: [.font: font], context: nil)
+        return boundingBox.width
+    }
 }
