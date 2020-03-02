@@ -42,4 +42,9 @@ enum Localizable {
     enum Map: String, Localized {
         case title
     }
+    
+    enum WeatherDetails: String, Localized {
+        case date
+        case timeHour
+    }
 }

@@ -115,6 +115,9 @@ extension WeatherDetailsViewController: UITableViewDataSource {
             return weatherForecastCell
         case .time:
             let weatherTimeCell: WeatherTimeTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+            if let weatherData = weatherData {
+                weatherTimeCell.configure(weatherData: weatherData)
+            }
             return weatherTimeCell
         }
     }

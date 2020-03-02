@@ -27,4 +27,11 @@ extension String {
         let boundingBox = self.boundingRect(with: constraintRect, options: [.usesLineFragmentOrigin, .usesFontLeading], attributes: [.font: font], context: nil)
         return boundingBox.width
     }
+    
+    func boldText(in range: NSRange) -> NSAttributedString {
+        let boldAttribute = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16)]
+        let attrStr = NSMutableAttributedString(string: self)
+        attrStr.setAttributes(boldAttribute, range: range)
+        return attrStr
+    }
 }

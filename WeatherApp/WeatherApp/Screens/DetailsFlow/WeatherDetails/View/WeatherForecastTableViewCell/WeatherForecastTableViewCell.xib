@@ -38,23 +38,23 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" placeholderIntrinsicWidth="519" placeholderIntrinsicHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="JMo-xE-MXb" userLabel="Forecast View Day 1" customClass="ForecastView" customModule="WeatherApp" customModuleProvider="target">
-                                <rect key="frame" x="10" y="57.5" width="519" height="40"/>
+                                <rect key="frame" x="10" y="57.5" width="519" height="46"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" placeholderIntrinsicWidth="519" placeholderIntrinsicHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="WgM-0o-lpC" userLabel="Forecast View Day 2" customClass="ForecastView" customModule="WeatherApp" customModuleProvider="target">
-                                <rect key="frame" x="10" y="107.5" width="519" height="40"/>
+                                <rect key="frame" x="10" y="113.5" width="519" height="46"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" placeholderIntrinsicWidth="519" placeholderIntrinsicHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="Ozz-Cs-mOh" userLabel="Forecast View Day 3" customClass="ForecastView" customModule="WeatherApp" customModuleProvider="target">
-                                <rect key="frame" x="10" y="157.5" width="519" height="40"/>
+                                <rect key="frame" x="10" y="169.5" width="519" height="46"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" placeholderIntrinsicWidth="519" placeholderIntrinsicHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="TDa-ZR-ebR" userLabel="Forecast View Day 4" customClass="ForecastView" customModule="WeatherApp" customModuleProvider="target">
-                                <rect key="frame" x="10" y="207.5" width="519" height="40"/>
+                                <rect key="frame" x="10" y="225.5" width="519" height="46"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" placeholderIntrinsicWidth="519" placeholderIntrinsicHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="Q0J-v7-pyM" userLabel="Forecast View Day 5" customClass="ForecastView" customModule="WeatherApp" customModuleProvider="target">
-                                <rect key="frame" x="10" y="257.5" width="519" height="40"/>
+                                <rect key="frame" x="10" y="281.5" width="519" height="46"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>

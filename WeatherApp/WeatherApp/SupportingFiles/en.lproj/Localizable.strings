@@ -29,3 +29,5 @@
 "WeatherDetails.predictability" = "Predictability";
 "WeatherDetails.forecast" = "Forecast";
 "WeatherDetails.time" = "Time and sun";
+"WeatherDetails.date" = "Date: %@";
+"WeatherDetails.timeHour" = "Time: %@";

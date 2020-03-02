@@ -11,15 +11,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="183" id="KGk-i7-Jjw" customClass="WeatherTimeTableViewCell" customModule="WeatherApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="464" height="183"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="341" id="KGk-i7-Jjw" customClass="WeatherTimeTableViewCell" customModule="WeatherApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="464" height="341"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="464" height="183"/>
+                <rect key="frame" x="0.0" y="0.0" width="464" height="341"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BpD-i9-W53">
-                        <rect key="frame" x="16" y="16" width="432" height="151"/>
+                        <rect key="frame" x="16" y="16" width="432" height="309"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WeatherDetails.time" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lGj-By-G0F">
                                 <rect key="frame" x="10" y="10" width="412" height="20.5"/>
@@ -37,12 +37,41 @@
                                     <constraint firstAttribute="height" constant="1" id="oWS-u6-OsF"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wg3-Mz-TEC" userLabel="Date">
+                                <rect key="frame" x="10" y="56.5" width="412" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGi-mV-7NG" userLabel="Time">
+                                <rect key="frame" x="10" y="87.5" width="412" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gve-Ko-GWa" customClass="SunView" customModule="WeatherApp" customModuleProvider="target">
+                                <rect key="frame" x="10" y="118.5" width="412" height="150"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="R3o-6p-vzG"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" name="tableViewCellBackground"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="gve-Ko-GWa" secondAttribute="trailing" constant="10" id="311-DG-nUH"/>
+                            <constraint firstItem="gve-Ko-GWa" firstAttribute="leading" secondItem="BpD-i9-W53" secondAttribute="leading" constant="10" id="4uF-er-OIJ"/>
+                            <constraint firstItem="gve-Ko-GWa" firstAttribute="top" secondItem="HGi-mV-7NG" secondAttribute="bottom" constant="10" id="9H5-Xq-ScL"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="gve-Ko-GWa" secondAttribute="bottom" constant="10" id="AR2-3Y-XZh"/>
                             <constraint firstAttribute="trailing" secondItem="lGj-By-G0F" secondAttribute="trailing" constant="10" id="Gei-AC-Dw4"/>
                             <constraint firstItem="lGj-By-G0F" firstAttribute="top" secondItem="BpD-i9-W53" secondAttribute="top" constant="10" id="ILM-OF-Zfm"/>
+                            <constraint firstItem="wg3-Mz-TEC" firstAttribute="top" secondItem="TwP-be-4UP" secondAttribute="bottom" constant="15" id="Isz-Le-3Fc"/>
+                            <constraint firstItem="wg3-Mz-TEC" firstAttribute="leading" secondItem="BpD-i9-W53" secondAttribute="leading" constant="10" id="XMY-tb-0ph"/>
+                            <constraint firstItem="HGi-mV-7NG" firstAttribute="leading" secondItem="BpD-i9-W53" secondAttribute="leading" constant="10" id="Zko-Jf-1Ea"/>
+                            <constraint firstAttribute="trailing" secondItem="wg3-Mz-TEC" secondAttribute="trailing" constant="10" id="c2m-qi-8VL"/>
+                            <constraint firstAttribute="trailing" secondItem="HGi-mV-7NG" secondAttribute="trailing" constant="10" id="cST-kA-97c"/>
                             <constraint firstItem="lGj-By-G0F" firstAttribute="leading" secondItem="BpD-i9-W53" secondAttribute="leading" constant="10" id="dHd-nX-zmV"/>
+                            <constraint firstItem="HGi-mV-7NG" firstAttribute="top" secondItem="wg3-Mz-TEC" secondAttribute="bottom" constant="10" id="fGa-aP-zrn"/>
                             <constraint firstItem="TwP-be-4UP" firstAttribute="leading" secondItem="BpD-i9-W53" secondAttribute="leading" constant="10" id="juU-5b-1iS"/>
                             <constraint firstAttribute="trailing" secondItem="TwP-be-4UP" secondAttribute="trailing" constant="10" id="op0-2t-Gcm"/>
                             <constraint firstItem="TwP-be-4UP" firstAttribute="top" secondItem="lGj-By-G0F" secondAttribute="bottom" constant="10" id="rWl-2w-o6D"/>
@@ -61,8 +90,14 @@
                     <constraint firstAttribute="bottom" secondItem="BpD-i9-W53" secondAttribute="bottom" constant="16" id="zvh-3U-yoq"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="236.23188405797103" y="154.35267857142856"/>
+            <connections>
+                <outlet property="dateLabel" destination="wg3-Mz-TEC" id="IXv-uh-91q"/>
+                <outlet property="sunView" destination="gve-Ko-GWa" id="OhZ-XB-58D"/>
+                <outlet property="timeLabel" destination="HGi-mV-7NG" id="abd-ZR-nzp"/>
+            </connections>
+            <point key="canvasLocation" x="236.23188405797103" y="207.25446428571428"/>
         </tableViewCell>
     </objects>
     <resources>

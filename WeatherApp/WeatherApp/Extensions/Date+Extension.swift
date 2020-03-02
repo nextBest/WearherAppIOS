@@ -17,6 +17,13 @@ extension Date {
         return dateFormatter.string(from: self)
     }
     
+    func getFormattedDate(timezone: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = TimeZone(identifier: timezone)!
+        dateFormatter.dateFormat = "dd.MM.yyyy"
+        return dateFormatter.string(from: self)
+    }
+    
     func getMinuteOfDay(timezone: String) -> Int {
         let minutesInHour = 60
         var calendar = Calendar.current
