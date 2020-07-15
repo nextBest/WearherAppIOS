@@ -11,6 +11,8 @@
 		5C42C59323AEBD750045047E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C42C59223AEBD750045047E /* AppDelegate.swift */; };
 		5C42C59C23AEBD770045047E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C42C59B23AEBD770045047E /* Assets.xcassets */; };
 		5C42C59F23AEBD770045047E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C42C59D23AEBD770045047E /* LaunchScreen.storyboard */; };
+		5CF3111B24BF993C0090DB7F /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF3111A24BF993C0090DB7F /* LoaderView.swift */; };
+		5CF3111E24BF99F10090DB7F /* LoaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CF3111D24BF99F10090DB7F /* LoaderView.xib */; };
 		C22A91A523E45755008C35BB /* WeatherForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22A91A323E45755008C35BB /* WeatherForecastTableViewCell.swift */; };
 		C22A91A623E45755008C35BB /* WeatherForecastTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C22A91A423E45755008C35BB /* WeatherForecastTableViewCell.xib */; };
 		C23097D8240661C000B26EAE /* SunView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23097D7240661C000B26EAE /* SunView.swift */; };
@@ -81,6 +83,8 @@
 		5C42C59B23AEBD770045047E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C42C59E23AEBD770045047E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C42C5A023AEBD770045047E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CF3111A24BF993C0090DB7F /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
+		5CF3111D24BF99F10090DB7F /* LoaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoaderView.xib; sourceTree = "<group>"; };
 		90F68AB8F358EA9DB7836B55 /* Pods-WeatherApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp.debug.xcconfig"; path = "Target Support Files/Pods-WeatherApp/Pods-WeatherApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C22A91A323E45755008C35BB /* WeatherForecastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecastTableViewCell.swift; sourceTree = "<group>"; };
 		C22A91A423E45755008C35BB /* WeatherForecastTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherForecastTableViewCell.xib; sourceTree = "<group>"; };
@@ -218,6 +222,15 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
+		5CF3111C24BF99D60090DB7F /* LoaderView */ = {
+			isa = PBXGroup;
+			children = (
+				5CF3111A24BF993C0090DB7F /* LoaderView.swift */,
+				5CF3111D24BF99F10090DB7F /* LoaderView.xib */,
+			);
+			path = LoaderView;
+			sourceTree = "<group>";
+		};
 		C22A91A223E4570C008C35BB /* WeatherForecastTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -333,6 +346,7 @@
 		C27ACE6423CC9DAC00D36443 /* Additions */ = {
 			isa = PBXGroup;
 			children = (
+				5CF3111C24BF99D60090DB7F /* LoaderView */,
 				C2484A6423E826ED007E258A /* XibSetup.swift */,
 				C27ACE6523CC9DC300D36443 /* SnackBar.swift */,
 				C2576D3623CDB30A00F87C62 /* Localizable.swift */,
@@ -529,6 +543,7 @@
 			files = (
 				5C42C59F23AEBD770045047E /* LaunchScreen.storyboard in Resources */,
 				C23BC28623E187FE00A9BB7C /* WeatherDetailsTableViewCell.xib in Resources */,
+				5CF3111E24BF99F10090DB7F /* LoaderView.xib in Resources */,
 				C2484A6323E822D5007E258A /* ForecastView.xib in Resources */,
 				C240001823DEEA6700E0573E /* Details.storyboard in Resources */,
 				C27ACE6B23CCC36300D36443 /* Localizable.strings in Resources */,
@@ -654,6 +669,7 @@
 				C2C7EB6223BF776A00977DD6 /* MapViewController.swift in Sources */,
 				C276C37D23D0A7CE0042C6F1 /* UITableView+Extension.swift in Sources */,
 				C2C7EB6723BF78B500977DD6 /* DashboardFlowFactory.swift in Sources */,
+				5CF3111B24BF993C0090DB7F /* LoaderView.swift in Sources */,
 				C2C7EB5523BF43BC00977DD6 /* Router.swift in Sources */,
 				C23D9D8324051F93000D5D8C /* UIImage+Extension.swift in Sources */,
 				C276C37F23D0A92E0042C6F1 /* UITableViewCell+Extension.swift in Sources */,

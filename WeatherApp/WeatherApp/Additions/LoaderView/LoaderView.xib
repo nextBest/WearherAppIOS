@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoaderView" customModule="WeatherApp" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicatorView" destination="YRo-X5-RU4" id="k6f-2m-zGc"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="792"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="YRo-X5-RU4">
+                    <rect key="frame" x="0.0" y="44" width="414" height="748"/>
+                    <color key="color" name="loader"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" name="loaderBackground"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="YRo-X5-RU4" secondAttribute="bottom" id="IYD-ZC-NXY"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="YRo-X5-RU4" secondAttribute="trailing" id="LEb-qu-n2r"/>
+                <constraint firstItem="YRo-X5-RU4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="WtT-vb-z7K"/>
+                <constraint firstItem="YRo-X5-RU4" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="dUI-dk-0BM"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="137.68115942028987" y="99.776785714285708"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="loader">
+            <color red="0.45098039215686275" green="0.69019607843137254" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="loaderBackground">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.30099999904632568" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
