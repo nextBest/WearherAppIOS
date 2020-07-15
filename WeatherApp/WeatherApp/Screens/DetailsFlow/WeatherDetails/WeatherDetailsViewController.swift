@@ -10,11 +10,10 @@ import UIKit
 
 class WeatherDetailsViewController: UIViewController {
     
-    @IBOutlet weak var background: UIImageView!
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var errorView: UIView!
-    @IBOutlet weak var connectionErrorView: UIView!
-    @IBOutlet weak var loader: UIActivityIndicatorView!
+    @IBOutlet private weak var background: UIImageView!
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var errorView: UIView!
+    @IBOutlet private weak var connectionErrorView: UIView!
     
     var presenter: WeatherDetailsPresenter!
     private var tableViewCells: [UITableViewCell] = []
@@ -31,12 +30,6 @@ class WeatherDetailsViewController: UIViewController {
         errorView.isHidden = hideErrorView
         connectionErrorView.isHidden = hideConnectionErrorView
         tableView.isHidden = hideTableView
-        loader.isHidden = hideLoader
-        if hideLoader {
-            loader.stopAnimating()
-        } else {
-            loader.startAnimating()
-        }
     }
     
     private func setupTableView() {
@@ -44,6 +37,10 @@ class WeatherDetailsViewController: UIViewController {
         tableView.dataSource = self
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = UITableView.automaticDimension
+        registerTalbeViewCells()
+    }
+    
+    private func registerTalbeViewCells() {
         tableView.register(WeatherHeaderTableViewCell.self)
         tableView.register(WeatherDetailsTableViewCell.self)
         tableView.register(WeatherForecastTableViewCell.self)

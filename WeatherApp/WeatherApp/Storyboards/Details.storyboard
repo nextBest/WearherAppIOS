@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -32,9 +32,6 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="nj1-gg-u6g">
-                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -44,10 +41,8 @@
                             <constraint firstItem="kCU-Aw-Nqu" firstAttribute="trailing" secondItem="DW2-5N-0vO" secondAttribute="trailing" id="84e-tn-A7P"/>
                             <constraint firstItem="VMa-jT-Rmu" firstAttribute="leading" secondItem="kCU-Aw-Nqu" secondAttribute="leading" id="8WE-93-zcz"/>
                             <constraint firstItem="9C9-o4-rHU" firstAttribute="top" secondItem="Tg9-MC-iXP" secondAttribute="top" id="ETr-FR-rbH"/>
-                            <constraint firstItem="nj1-gg-u6g" firstAttribute="centerY" secondItem="Tg9-MC-iXP" secondAttribute="centerY" id="KAA-5P-uUY"/>
                             <constraint firstAttribute="bottom" secondItem="iOl-l4-sWH" secondAttribute="bottom" id="PVg-oT-wmj"/>
                             <constraint firstItem="kCU-Aw-Nqu" firstAttribute="bottom" secondItem="DW2-5N-0vO" secondAttribute="bottom" id="Qlb-gZ-Teo"/>
-                            <constraint firstItem="nj1-gg-u6g" firstAttribute="centerX" secondItem="Tg9-MC-iXP" secondAttribute="centerX" id="REG-TC-l8h"/>
                             <constraint firstItem="kCU-Aw-Nqu" firstAttribute="trailing" secondItem="iOl-l4-sWH" secondAttribute="trailing" id="XwL-FY-i3E"/>
                             <constraint firstAttribute="trailing" secondItem="9C9-o4-rHU" secondAttribute="trailing" id="cjT-bC-KJr"/>
                             <constraint firstItem="iOl-l4-sWH" firstAttribute="top" secondItem="kCU-Aw-Nqu" secondAttribute="top" id="ep6-NM-mLj"/>
@@ -63,7 +58,6 @@
                         <outlet property="background" destination="9C9-o4-rHU" id="qo3-lv-xZ7"/>
                         <outlet property="connectionErrorView" destination="VMa-jT-Rmu" id="mVj-km-odP"/>
                         <outlet property="errorView" destination="DW2-5N-0vO" id="J0a-39-4pF"/>
-                        <outlet property="loader" destination="nj1-gg-u6g" id="h73-dD-Y87"/>
                         <outlet property="tableView" destination="iOl-l4-sWH" id="ACR-zI-tgz"/>
                     </connections>
                 </viewController>
