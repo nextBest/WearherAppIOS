@@ -64,7 +64,7 @@ PODS:
   - SDWebImage (5.5.2):
     - SDWebImage/Core (= 5.5.2)
   - SDWebImage/Core (5.5.2)
-  - SwiftLint (0.38.0)
+  - SwiftLint (0.39.2)
 
 DEPENDENCIES:
   - Alamofire (~> 5.0.0-rc.3)
@@ -72,7 +72,7 @@ DEPENDENCIES:
   - GoogleMaps (= 3.7.0)
   - MaterialComponents/Snackbar (= 93.3.0)
   - SDWebImage (~> 5.0)
-  - SwiftLint (= 0.38.0)
+  - SwiftLint (= 0.39.2)
 
 SPEC REPOS:
   trunk:
@@ -93,8 +93,8 @@ SPEC CHECKSUMS:
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
   MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
   SDWebImage: 4d5c027c935438f341ed33dbac53ff9f479922ca
-  SwiftLint: 4105f061f9812b214568b736dab580ab2c73a582
+  SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
 
-PODFILE CHECKSUM: ee3359e37ab1f44c82afd3b28267b3d49e83c9db
+PODFILE CHECKSUM: 1064168d0d12dfd53309d4457a68266d154c8e93
 
 COCOAPODS: 1.8.4
