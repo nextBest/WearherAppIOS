@@ -14,7 +14,6 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var connectionErrorView: UIView!
     @IBOutlet weak var beginningView: UIView!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var loader: UIActivityIndicatorView!
     
     var presenter: SearchPresenter!
     private var locationList: [CityCell] = []
@@ -44,7 +43,7 @@ class SearchViewController: UIViewController {
         tabBarController?.title = Localizable.Search.title.text
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.delegate = self
-        searchController.dimsBackgroundDuringPresentation = false
+        searchController.obscuresBackgroundDuringPresentation = false
         tabBarController?.navigationItem.searchController = searchController
     }
     
@@ -54,11 +53,10 @@ class SearchViewController: UIViewController {
         connectionErrorView.isHidden = hideConnectionErrorView
         noResultsView.isHidden = hideNoResultsView
         tableView.isHidden = hideTableView
-        loader.isHidden = hideLoader
         if hideLoader {
-            loader.stopAnimating()
+            self.hideLoader()
         } else {
-            loader.startAnimating()
+            self.showLoader()
         }
     }
     
