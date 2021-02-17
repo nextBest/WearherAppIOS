@@ -18,7 +18,7 @@ class ForecastView: CustomXibView {
     
     func setup(weather: Weather) {
         dayLabel.text = weather.applicableDate.dateToDay()
-        weatherImage.sd_setImage(with: URL(string: "https://www.metaweather.com/static/img/weather/png/\(weather.weatherStateAbbr).png"), completed: nil)
+        weatherImage.sd_setImage(with: Configuration.imageUrl(weatherStateAbbr: weather.weatherStateAbbr), completed: nil)
         tempDayLabel.text = weather.maxTemp.temperature()
         tempNightLabel.text = weather.minTemp.temperature()
     }

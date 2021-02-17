@@ -13,7 +13,6 @@ protocol WeatherApi {
     func searchLocationByText(locationTextParams: LocationTextParams, success: @escaping (LocationList) -> Void, fail: @escaping (NetworkError) -> Void)
     func searchLocationByCoordinates(locationParams: LocationParams, success: @escaping (LocationList) -> Void, fail: @escaping (NetworkError) -> Void)
     func getWeather(woeid: String, success: @escaping (WeatherData) -> Void, fail: @escaping (NetworkError) -> Void)
-    func getWeatherForSpecificDay()
 }
 
 class WeatherApiImpl: WeatherApi {
@@ -25,10 +24,6 @@ class WeatherApiImpl: WeatherApi {
     
     func getWeather(woeid: String, success: @escaping (WeatherData) -> Void, fail: @escaping (NetworkError) -> Void) {
         requestManager.makeRequest(router: .location(woeid: woeid), resultType: WeatherData.self, success: success, fail: fail)
-    }
-    
-    func getWeatherForSpecificDay() {
-        
     }
     
     func searchLocationByText(locationTextParams: LocationTextParams, success: @escaping (LocationList) -> Void, fail: @escaping (NetworkError) -> Void) {

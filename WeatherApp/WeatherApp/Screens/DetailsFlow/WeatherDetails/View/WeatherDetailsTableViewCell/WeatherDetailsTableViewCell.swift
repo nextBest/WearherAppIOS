@@ -17,7 +17,7 @@ class WeatherDetailsTableViewCell: UITableViewCell {
     @IBOutlet weak var predictabilityLabel: UILabel!
     
     func configure(weather: Weather) {
-        weatherImage.sd_setImage(with: URL(string: "https://www.metaweather.com/static/img/weather/png/\(weather.weatherStateAbbr).png"), completed: nil)
+        weatherImage.sd_setImage(with: Configuration.imageUrl(weatherStateAbbr: weather.weatherStateAbbr), completed: nil)
         humidityLabel.text = weather.humidity.toString() + " %"
         visibilityLabel.text = weather.visibility.toString() + " miles"
         pressureLabel.text = weather.airPressure.toString() + " mBar"
