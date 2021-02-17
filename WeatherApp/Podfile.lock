@@ -61,9 +61,9 @@ PODS:
     - MaterialComponents/private/Math
   - MDFInternationalization (2.0.0)
   - MDFTextAccessibility (2.0.0)
-  - SDWebImage (5.5.2):
-    - SDWebImage/Core (= 5.5.2)
-  - SDWebImage/Core (5.5.2)
+  - SDWebImage (5.10.4):
+    - SDWebImage/Core (= 5.10.4)
+  - SDWebImage/Core (5.10.4)
   - SwiftLint (0.42.0)
 
 DEPENDENCIES:
@@ -71,7 +71,7 @@ DEPENDENCIES:
   - AlamofireNetworkActivityLogger (~> 3.4)
   - GoogleMaps (= 4.1.0)
   - MaterialComponents/Snackbar (= 93.3.0)
-  - SDWebImage (~> 5.0)
+  - SDWebImage (= 5.10.4)
   - SwiftLint (= 0.42.0)
 
 SPEC REPOS:
@@ -92,9 +92,9 @@ SPEC CHECKSUMS:
   MaterialComponents: 6b2eb24aa0c1d1a6453f05a6bbe3ed6c80843161
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
   MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
-  SDWebImage: 4d5c027c935438f341ed33dbac53ff9f479922ca
+  SDWebImage: c666b97e1fa9c64b4909816a903322018f0a9c84
   SwiftLint: 4fa9579c63416865179bc416f0a92d55f009600d
 
-PODFILE CHECKSUM: afe542fa7a2cd1086dbe959614652fd6c80d6d88
+PODFILE CHECKSUM: 5a5305ef71fff04e409e2cdaf80133e4f1b5d229
 
 COCOAPODS: 1.9.3
