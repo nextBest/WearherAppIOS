@@ -13,6 +13,6 @@ class SnackBar {
     static func showErrorMessage(message: String) {
         let snackBarMessage = MDCSnackbarMessage()
         snackBarMessage.text = message
-        MDCSnackbarManager.show(snackBarMessage)
+        MDCSnackbarManager.default.show(snackBarMessage)
     }
 }

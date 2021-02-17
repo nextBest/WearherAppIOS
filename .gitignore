@@ -602,3 +602,4 @@ WeatherApp/Pods/Target Support Files/MDFTextAccessibility/MDFTextAccessibility-u
 WeatherApp/Pods/Target Support Files/MDFTextAccessibility/MDFTextAccessibility.modulemap
 WeatherApp/Pods/Target Support Files/MDFTextAccessibility/MDFTextAccessibility.xcconfig
 WeatherApp/Pods/
+.DS_Store

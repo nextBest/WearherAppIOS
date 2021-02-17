@@ -6,10 +6,10 @@ target 'WeatherApp' do
   use_frameworks!
 
   # Pods for WeatherApp
-  pod 'SwiftLint', '0.39.2'
-  pod 'Alamofire', '~> 5.0.0-rc.3'
-  pod 'AlamofireNetworkActivityLogger', '~> 3.0'
-  pod 'GoogleMaps', '3.7.0'
-  pod 'MaterialComponents/Snackbar', '93.3.0'
-  pod 'SDWebImage', '~> 5.0'
+  pod 'SwiftLint', '0.42.0'
+  pod 'Alamofire', '5.4.1'
+  pod 'AlamofireNetworkActivityLogger', '~> 3.4'
+  pod 'GoogleMaps', '4.1.0'
+  pod 'MaterialComponents/Snackbar', '122.0.0'
+  pod 'SDWebImage', '5.10.4'
 end

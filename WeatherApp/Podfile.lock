@@ -1,51 +1,62 @@
 PODS:
-  - Alamofire (5.0.0-rc.3)
-  - AlamofireNetworkActivityLogger (3.0.0):
-    - Alamofire (~> 5.0.0-rc.2)
-  - GoogleMaps (3.7.0):
-    - GoogleMaps/Maps (= 3.7.0)
-  - GoogleMaps/Base (3.7.0)
-  - GoogleMaps/Maps (3.7.0):
+  - Alamofire (5.4.1)
+  - AlamofireNetworkActivityLogger (3.4.0):
+    - Alamofire (~> 5.4.0)
+  - GoogleMaps (4.1.0):
+    - GoogleMaps/Maps (= 4.1.0)
+  - GoogleMaps/Base (4.1.0)
+  - GoogleMaps/Maps (4.1.0):
     - GoogleMaps/Base
-  - MaterialComponents/AnimationTiming (93.3.0)
-  - MaterialComponents/Buttons (93.3.0):
+  - MaterialComponents/AnimationTiming (122.0.0)
+  - MaterialComponents/Availability (122.0.0)
+  - MaterialComponents/Buttons (122.0.0):
     - MaterialComponents/Elevation
     - MaterialComponents/Ink
     - MaterialComponents/private/Math
     - MaterialComponents/Ripple
     - MaterialComponents/ShadowElevations
     - MaterialComponents/ShadowLayer
+    - MaterialComponents/ShapeLibrary
     - MaterialComponents/Shapes
     - MaterialComponents/Typography
     - MDFInternationalization
     - MDFTextAccessibility
-  - MaterialComponents/Elevation (93.3.0):
+  - MaterialComponents/Elevation (122.0.0):
+    - MaterialComponents/Availability
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
-  - MaterialComponents/Ink (93.3.0):
+  - MaterialComponents/Ink (122.0.0):
+    - MaterialComponents/Availability
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
-  - MaterialComponents/OverlayWindow (93.3.0):
+  - MaterialComponents/OverlayWindow (122.0.0):
+    - MaterialComponents/Availability
     - MaterialComponents/private/Application
-  - MaterialComponents/private/Application (93.3.0)
-  - MaterialComponents/private/Color (93.3.0)
-  - MaterialComponents/private/KeyboardWatcher (93.3.0):
+  - MaterialComponents/private/Application (122.0.0)
+  - MaterialComponents/private/Color (122.0.0):
+    - MaterialComponents/Availability
+  - MaterialComponents/private/KeyboardWatcher (122.0.0):
     - MaterialComponents/private/Application
-  - MaterialComponents/private/Math (93.3.0)
-  - MaterialComponents/private/Overlay (93.3.0)
-  - MaterialComponents/Ripple (93.3.0):
+  - MaterialComponents/private/Math (122.0.0)
+  - MaterialComponents/private/Overlay (122.0.0)
+  - MaterialComponents/Ripple (122.0.0):
     - MaterialComponents/AnimationTiming
+    - MaterialComponents/Availability
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
-  - MaterialComponents/ShadowElevations (93.3.0)
-  - MaterialComponents/ShadowLayer (93.3.0):
+  - MaterialComponents/ShadowElevations (122.0.0)
+  - MaterialComponents/ShadowLayer (122.0.0):
     - MaterialComponents/ShadowElevations
-  - MaterialComponents/Shapes (93.3.0):
+  - MaterialComponents/ShapeLibrary (122.0.0):
+    - MaterialComponents/private/Math
+    - MaterialComponents/Shapes
+  - MaterialComponents/Shapes (122.0.0):
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
     - MaterialComponents/ShadowLayer
-  - MaterialComponents/Snackbar (93.3.0):
+  - MaterialComponents/Snackbar (122.0.0):
     - MaterialComponents/AnimationTiming
+    - MaterialComponents/Availability
     - MaterialComponents/Buttons
     - MaterialComponents/Elevation
     - MaterialComponents/OverlayWindow
@@ -56,23 +67,24 @@ PODS:
     - MaterialComponents/ShadowElevations
     - MaterialComponents/ShadowLayer
     - MaterialComponents/Typography
-  - MaterialComponents/Typography (93.3.0):
+  - MaterialComponents/Typography (122.0.0):
     - MaterialComponents/private/Application
     - MaterialComponents/private/Math
+    - MDFTextAccessibility
   - MDFInternationalization (2.0.0)
   - MDFTextAccessibility (2.0.0)
-  - SDWebImage (5.5.2):
-    - SDWebImage/Core (= 5.5.2)
-  - SDWebImage/Core (5.5.2)
-  - SwiftLint (0.39.2)
+  - SDWebImage (5.10.4):
+    - SDWebImage/Core (= 5.10.4)
+  - SDWebImage/Core (5.10.4)
+  - SwiftLint (0.42.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 5.0.0-rc.3)
-  - AlamofireNetworkActivityLogger (~> 3.0)
-  - GoogleMaps (= 3.7.0)
-  - MaterialComponents/Snackbar (= 93.3.0)
-  - SDWebImage (~> 5.0)
-  - SwiftLint (= 0.39.2)
+  - Alamofire (= 5.4.1)
+  - AlamofireNetworkActivityLogger (~> 3.4)
+  - GoogleMaps (= 4.1.0)
+  - MaterialComponents/Snackbar (= 122.0.0)
+  - SDWebImage (= 5.10.4)
+  - SwiftLint (= 0.42.0)
 
 SPEC REPOS:
   trunk:
@@ -86,15 +98,15 @@ SPEC REPOS:
     - SwiftLint
 
 SPEC CHECKSUMS:
-  Alamofire: ca8c0de6906873be89d6deec5c8de279e00bf872
-  AlamofireNetworkActivityLogger: 94e8a7d454a4a9800cef1d0c1d3699754493684b
-  GoogleMaps: 55da829c68aa931f3ae982b9e341cc2f3d89c587
-  MaterialComponents: 6b2eb24aa0c1d1a6453f05a6bbe3ed6c80843161
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  AlamofireNetworkActivityLogger: 162ab8aee00e6267a4304d7cc134e13ccfe3bcc5
+  GoogleMaps: 008e2c80e38605b56b560e8deb73d4194ff30bef
+  MaterialComponents: 832d4c6b1f5c294e156fbc5b7054d1ed278582f2
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
   MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
-  SDWebImage: 4d5c027c935438f341ed33dbac53ff9f479922ca
-  SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
+  SDWebImage: c666b97e1fa9c64b4909816a903322018f0a9c84
+  SwiftLint: 4fa9579c63416865179bc416f0a92d55f009600d
 
-PODFILE CHECKSUM: 1064168d0d12dfd53309d4457a68266d154c8e93
+PODFILE CHECKSUM: 8d18c08cf7fd7f0f3922c033f08ca93f0304e57a
 
 COCOAPODS: 1.9.3
