@@ -14,6 +14,24 @@ class LoaderView: CustomXibView {
     // MARK: IBOutlets
     @IBOutlet private weak var activityIndicatorView: UIActivityIndicatorView!
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupActivityIndicatorView()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupActivityIndicatorView()
+    }
+    
+    private func setupActivityIndicatorView() {
+        if #available(iOS 13.0, *) {
+            activityIndicatorView.style = .large
+        } else {
+            activityIndicatorView.style = .whiteLarge
+        }
+    }
+    
     // MARK: Internal methods
     func startAnimating() {
         activityIndicatorView.startAnimating()
