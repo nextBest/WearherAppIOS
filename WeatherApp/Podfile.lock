@@ -2,10 +2,10 @@ PODS:
   - Alamofire (5.4.1)
   - AlamofireNetworkActivityLogger (3.4.0):
     - Alamofire (~> 5.4.0)
-  - GoogleMaps (3.7.0):
-    - GoogleMaps/Maps (= 3.7.0)
-  - GoogleMaps/Base (3.7.0)
-  - GoogleMaps/Maps (3.7.0):
+  - GoogleMaps (4.1.0):
+    - GoogleMaps/Maps (= 4.1.0)
+  - GoogleMaps/Base (4.1.0)
+  - GoogleMaps/Maps (4.1.0):
     - GoogleMaps/Base
   - MaterialComponents/AnimationTiming (93.3.0)
   - MaterialComponents/Buttons (93.3.0):
@@ -69,7 +69,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (= 5.4.1)
   - AlamofireNetworkActivityLogger (~> 3.4)
-  - GoogleMaps (= 3.7.0)
+  - GoogleMaps (= 4.1.0)
   - MaterialComponents/Snackbar (= 93.3.0)
   - SDWebImage (~> 5.0)
   - SwiftLint (= 0.42.0)
@@ -88,13 +88,13 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   AlamofireNetworkActivityLogger: 162ab8aee00e6267a4304d7cc134e13ccfe3bcc5
-  GoogleMaps: 55da829c68aa931f3ae982b9e341cc2f3d89c587
+  GoogleMaps: 008e2c80e38605b56b560e8deb73d4194ff30bef
   MaterialComponents: 6b2eb24aa0c1d1a6453f05a6bbe3ed6c80843161
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
   MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
   SDWebImage: 4d5c027c935438f341ed33dbac53ff9f479922ca
   SwiftLint: 4fa9579c63416865179bc416f0a92d55f009600d
 
-PODFILE CHECKSUM: 5f09fade0b7a3172b8242d3307431ae037071c0d
+PODFILE CHECKSUM: afe542fa7a2cd1086dbe959614652fd6c80d6d88
 
 COCOAPODS: 1.9.3
