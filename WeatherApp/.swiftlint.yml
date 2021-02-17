@@ -8,13 +8,8 @@ disabled_rules:
  - cyclomatic_complexity
  - force_cast
  - force_try
- - type_name
  - legacy_constant
  - legacy_constructor
-
-force_cast: error
-force_try: error
-weak_delegate: error
 
 line_length: 
   warning: 200
