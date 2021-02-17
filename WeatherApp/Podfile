@@ -10,6 +10,6 @@ target 'WeatherApp' do
   pod 'Alamofire', '5.4.1'
   pod 'AlamofireNetworkActivityLogger', '~> 3.4'
   pod 'GoogleMaps', '4.1.0'
-  pod 'MaterialComponents/Snackbar', '93.3.0'
+  pod 'MaterialComponents/Snackbar', '122.0.0'
   pod 'SDWebImage', '5.10.4'
 end
