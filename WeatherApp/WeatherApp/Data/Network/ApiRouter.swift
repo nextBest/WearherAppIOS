@@ -15,8 +15,6 @@ enum ApiRouter: URLRequestConvertible {
     case location(woeid: String)
     case locationDay(woeid: String, date: String)
     
-    static let baseUrlString = "https://www.metaweather.com/api/"
-    
     var method: HTTPMethod {
         switch self {
         case .locationSearch, .location, .locationDay, .locationSearchLatLong:
@@ -36,7 +34,7 @@ enum ApiRouter: URLRequestConvertible {
     }
     
     func asURLRequest() throws -> URLRequest {
-        let url = try ApiRouter.baseUrlString.asURL()
+        let url = try Configuration.baseUrlString.asURL()
         
         var urlRequest = URLRequest(url: url.appendingPathComponent(path))
         urlRequest.httpMethod = method.rawValue

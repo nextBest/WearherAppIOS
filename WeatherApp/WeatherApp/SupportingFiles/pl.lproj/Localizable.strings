@@ -20,3 +20,14 @@
 
 //Map
 "Map.title" = "Mapa";
+
+//WeatherDetails
+"WeatherDetails.details" = "Informacje";
+"WeatherDetails.humidity" = "Wilgotność";
+"WeatherDetails.visibility" = "Widoczność";
+"WeatherDetails.pressure" = "Ciśnienie";
+"WeatherDetails.predictability" = "Przewidywalność";
+"WeatherDetails.forecast" = "Prognoza";
+"WeatherDetails.time" = "Czas i słońce";
+"WeatherDetails.date" = "Data: %@";
+"WeatherDetails.timeHour" = "Godzina: %@";

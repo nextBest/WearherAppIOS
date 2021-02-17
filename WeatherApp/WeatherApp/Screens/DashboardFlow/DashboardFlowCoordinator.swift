@@ -34,18 +34,27 @@ class DashboardFlowCoordinator: Coordinator {
         searchViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 1)
         return [mapViewController, searchViewController]
     }
+    
+    private func runDetailsFlow(cityName: String, woeid: Int? = nil, weatherData: WeatherData? = nil) {
+        let coordinator = DetailsFlowCoordinator(router: router, weatherRepository: weatherRepository, cityName: cityName, woeid: woeid, weatherData: weatherData)
+        coordinator.finishFlow = { [unowned self] coordinator in
+            self.removeCoordinator(coordinator)
+        }
+        addCoordinator(coordinator)
+        coordinator.start()
+    }
 }
 
 // MARK: - MapPresenterDelegate
 extension DashboardFlowCoordinator: MapPresenterDelegate {
-    func weatherDetailsFindForLocation(weatherData: WeatherData) {
-        // TODO implement show weather details screen
+    func weatherDetailsFindForLocation(weatherData: WeatherData, cityName: String) {
+        runDetailsFlow(cityName: cityName, weatherData: weatherData)
     }
 }
 
 // MARK: - SearchPresenterDelegate
 extension DashboardFlowCoordinator: SearchPresenterDelegate {
-    func placeFind(woeid: Int) {
-        // TODO open weather details screen
+    func placeFind(woeid: Int, cityName: String) {
+        runDetailsFlow(cityName: cityName, woeid: woeid)
     }
 }

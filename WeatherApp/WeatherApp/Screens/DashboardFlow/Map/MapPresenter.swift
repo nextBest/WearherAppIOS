@@ -16,7 +16,7 @@ protocol MapViewDelegate: AnyObject {
 }
 
 protocol MapPresenterDelegate: AnyObject {
-    func weatherDetailsFindForLocation(weatherData: WeatherData)
+    func weatherDetailsFindForLocation(weatherData: WeatherData, cityName: String)
 }
 
 class MapPresenter {
@@ -42,7 +42,7 @@ class MapPresenter {
     private func searchLocationByCoordinates(latitude: Double, longitude: Double) {
         weatherRepository.searchLocationByCoordinates(latitude: latitude, longitude: longitude, success: { [weak self] weatherData in
             guard let strongSelf = self else { return }
-            strongSelf.delegate.weatherDetailsFindForLocation(weatherData: weatherData)
+            strongSelf.delegate.weatherDetailsFindForLocation(weatherData: weatherData, cityName: weatherData.title)
         }) { [weak self] error in
             guard let strongSelf = self else { return }
             strongSelf.view.showErrorSnackBar(message: error.message)

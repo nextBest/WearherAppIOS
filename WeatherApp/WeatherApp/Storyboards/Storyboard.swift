@@ -8,4 +8,5 @@
 
 enum Storyboard: String {
     case dashboard = "Dashboard"
+    case details = "Details"
 }

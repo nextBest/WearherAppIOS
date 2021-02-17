@@ -13,8 +13,8 @@ struct Weather: Codable {
     let weatherStateName: String
     let weatherStateAbbr: String
     let windDirectionCompass: String
-    let created: String
-    let applicableDate: String
+    let created: Date
+    let applicableDate: Date
     let minTemp: Double
     let maxTemp: Double
     let theTemp: Double
