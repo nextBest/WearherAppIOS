@@ -11,17 +11,17 @@
 "NetworkError.error" = "There was a problem. Try again later";
 "NetworkError.noLocationFound" = "Location not found";
 
-//Search
+// Search
 "Search.title" = "Search";
 "Search.locationType" = "Location type:";
 "Search.showMore" = "Show more";
 "Search.showLess" = "Show less";
 "Search.showPlaceOnMap" = "Show place on map";
 
-//Map
+// Map
 "Map.title" = "Map";
 
-//WeatherDetails
+// WeatherDetails
 "WeatherDetails.details" = "Details";
 "WeatherDetails.humidity" = "Humidity";
 "WeatherDetails.visibility" = "Visibility";
@@ -31,3 +31,14 @@
 "WeatherDetails.time" = "Time and sun";
 "WeatherDetails.date" = "Date: %@";
 "WeatherDetails.timeHour" = "Time: %@";
+
+// Onboarding
+"Onboarding.skip" = "Skip";
+"Onboarding.letsGo" = "Let's go";
+"Onboarding.next" = "Next";
+"Onboarding.checkCurrentWeatherTitle" = "Check current weather";
+"Onboarding.checkCurrentWeatherDescription" = "Check the current weather and a forecast for the coming days, if available, using WeatherApp.";
+"Onboarding.easilyFindYourLocationTitle" = "Easily find your location";
+"Onboarding.easilyFindYourLocationDescription" = "Easily find your location using map or entering your city name.";
+"Onboarding.checkWeatherOnAnyPlaceOnEarthTitle" = "Check weather on any place on earth";
+"Onboarding.checkWeatherOnAnyPlaceOnEarthDescription" = "Check weather on any place on earth using earth map or searching by place name.";

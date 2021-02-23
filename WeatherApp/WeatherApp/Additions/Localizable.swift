@@ -47,4 +47,15 @@ enum Localizable {
         case date
         case timeHour
     }
+    
+    enum Onboarding: String, Localized {
+        case letsGo
+        case next
+        case checkCurrentWeatherTitle
+        case checkCurrentWeatherDescription
+        case easilyFindYourLocationTitle
+        case easilyFindYourLocationDescription
+        case checkWeatherOnAnyPlaceOnEarthTitle
+        case checkWeatherOnAnyPlaceOnEarthDescription
+    }
 }
