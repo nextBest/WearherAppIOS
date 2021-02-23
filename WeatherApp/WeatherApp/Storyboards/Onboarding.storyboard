@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Onboarding View Controller-->
+        <scene sceneID="LSK-Zj-1nx">
+            <objects>
+                <viewController storyboardIdentifier="OnboardingViewController" id="ewg-Wf-W9b" customClass="OnboardingViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FhU-Wj-TAG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.25" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_bg" translatesAutoresizingMaskIntoConstraints="NO" id="TIy-xM-lnf">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2QM-hp-ury">
+                                <rect key="frame" x="0.0" y="44" width="414" height="798"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4Uj-u7-gA2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="TIy-xM-lnf" secondAttribute="trailing" id="0se-eN-bcN"/>
+                            <constraint firstItem="4Uj-u7-gA2" firstAttribute="bottom" secondItem="2QM-hp-ury" secondAttribute="bottom" constant="20" id="EOV-6O-n0r"/>
+                            <constraint firstItem="4Uj-u7-gA2" firstAttribute="trailing" secondItem="2QM-hp-ury" secondAttribute="trailing" id="TYt-j7-MNj"/>
+                            <constraint firstAttribute="bottom" secondItem="TIy-xM-lnf" secondAttribute="bottom" id="UKm-Wa-ZPe"/>
+                            <constraint firstItem="2QM-hp-ury" firstAttribute="leading" secondItem="4Uj-u7-gA2" secondAttribute="leading" id="ZWb-r7-MXx"/>
+                            <constraint firstItem="TIy-xM-lnf" firstAttribute="top" secondItem="FhU-Wj-TAG" secondAttribute="top" id="p7L-hZ-90u"/>
+                            <constraint firstItem="TIy-xM-lnf" firstAttribute="leading" secondItem="FhU-Wj-TAG" secondAttribute="leading" id="ujw-8d-G7v"/>
+                            <constraint firstItem="2QM-hp-ury" firstAttribute="top" secondItem="4Uj-u7-gA2" secondAttribute="top" id="wFa-af-uRC"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5LA-LU-vot" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="25" y="153"/>
+        </scene>
+        <!--Onboarding Page View Controller-->
+        <scene sceneID="skL-5h-9zu">
+            <objects>
+                <pageViewController storyboardIdentifier="OnboardingPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="IE9-4b-F7g" customClass="OnboardingPageViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fQz-Zn-MHT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="961" y="153"/>
+        </scene>
+        <!--Onboarding Single Page View Controller-->
+        <scene sceneID="n4z-C0-YqV">
+            <objects>
+                <viewController storyboardIdentifier="OnboardingSinglePageViewController" id="Fqf-AF-zYa" customClass="OnboardingSinglePageViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RIf-cW-yfA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="43P-UV-qS6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SXu-O1-xTP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1928" y="153"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="splash_bg" width="540" height="960"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -9,7 +9,7 @@
 import Foundation
 import MaterialComponents.MaterialSnackbar
 
-class SnackBar {
+struct SnackBar {
     static func showErrorMessage(message: String) {
         let snackBarMessage = MDCSnackbarMessage()
         snackBarMessage.text = message

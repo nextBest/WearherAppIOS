@@ -15,7 +15,7 @@ protocol WeatherApi {
     func getWeather(woeid: String, success: @escaping (WeatherData) -> Void, fail: @escaping (NetworkError) -> Void)
 }
 
-class WeatherApiImpl: WeatherApi {
+struct WeatherApiImpl: WeatherApi {
     private let requestManager: RequestManager
     
     init(requestManager: RequestManager) {

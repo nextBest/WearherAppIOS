@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-class RequestManager {
+struct RequestManager {
     private let sessionManager = Session()
     
     func makeRequest<T>(router: ApiRouter, resultType: T.Type, success: @escaping (T) -> Void, fail: @escaping (NetworkError) -> Void) where T: Codable {
