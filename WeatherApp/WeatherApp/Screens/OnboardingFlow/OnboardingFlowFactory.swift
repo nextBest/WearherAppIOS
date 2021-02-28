@@ -10,9 +10,9 @@ import Foundation
 
 class OnboardingFlowFactory {
     
-    static func makeOnboardingViewController(delegate: OnboardingPresenterDelegate) -> OnboardingViewController {
+    static func makeOnboardingViewController(delegate: OnboardingPresenterDelegate, applicationRepository: ApplicationRepository) -> OnboardingViewController {
         let onboardingViewController = OnboardingViewController.controllerFromStoryboard(.onboarding)
-        let onboardingPresenter = OnboardingPresenter(view: onboardingViewController, delegate: delegate)
+        let onboardingPresenter = OnboardingPresenter(view: onboardingViewController, delegate: delegate, applicationRepository: applicationRepository)
         onboardingViewController.presenter = onboardingPresenter
         return onboardingViewController
     }

@@ -18,15 +18,18 @@ class OnboardingPresenter {
     // MARK: Private properties
     private weak var view: OnboardingViewDelegate?
     private weak var delegate: OnboardingPresenterDelegate?
+    private let applicationRepository: ApplicationRepository
     
     // MARK: Initialization
-    init(view: OnboardingViewDelegate, delegate: OnboardingPresenterDelegate) {
+    init(view: OnboardingViewDelegate, delegate: OnboardingPresenterDelegate, applicationRepository: ApplicationRepository) {
         self.view = view
         self.delegate = delegate
+        self.applicationRepository = applicationRepository
     }
     
     // MARK: Public functions
     func finish() {
+        applicationRepository.onboardingWasPresentedToUser()
         delegate?.userDidFinishOnboarding()
     }
     

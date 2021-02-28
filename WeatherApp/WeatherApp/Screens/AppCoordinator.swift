@@ -30,7 +30,7 @@ class AppCoordinator: Coordinator {
     }
     
     private func runOnboardingFlow() {
-        let coordinator = OnboardingFlowCoordinator(router: router)
+        let coordinator = OnboardingFlowCoordinator(router: router, applicationRepository: applicationRepository)
         coordinator.finishFlow = { [weak self] coordinator in
             self?.removeCoordinator(coordinator)
             self?.runDashboardFlow()
