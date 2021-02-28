@@ -10,11 +10,24 @@ import Foundation
 
 protocol OnboardingViewDelegate: AnyObject {}
 
+protocol OnboardingPresenterDelegate: AnyObject {
+    func userDidFinishOnboarding()
+}
+
 class OnboardingPresenter {
-    private unowned let view: OnboardingViewDelegate
+    // MARK: Private properties
+    private weak var view: OnboardingViewDelegate?
+    private weak var delegate: OnboardingPresenterDelegate?
     
-    init(view: OnboardingViewDelegate) {
+    // MARK: Initialization
+    init(view: OnboardingViewDelegate, delegate: OnboardingPresenterDelegate) {
         self.view = view
+        self.delegate = delegate
+    }
+    
+    // MARK: Public functions
+    func finish() {
+        delegate?.userDidFinishOnboarding()
     }
     
 }
