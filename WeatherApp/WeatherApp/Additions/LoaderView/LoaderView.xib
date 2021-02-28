@@ -21,6 +21,7 @@
             <subviews>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="YRo-X5-RU4">
                     <rect key="frame" x="0.0" y="44" width="414" height="748"/>
+                    <color key="tintColor" name="blue"/>
                     <color key="color" name="loader"/>
                 </activityIndicatorView>
             </subviews>
@@ -39,6 +40,9 @@
         </view>
     </objects>
     <resources>
+        <namedColor name="blue">
+            <color red="0.14117647058823529" green="0.40000000000000002" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="loader">
             <color red="0.45098039215686275" green="0.69019607843137254" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
