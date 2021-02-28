@@ -12,4 +12,9 @@ extension UIColor {
     class var day: UIColor {
         return UIColor(named: "day")!
     }
+    
+    class var blue: UIColor {
+        return UIColor(named: "blue")!
+    }
+    
 }

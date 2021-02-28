@@ -20,4 +20,16 @@ extension UIImage {
     class var sky: UIImage {
         return UIImage(named: "sky")!
     }
+    
+    class var onboardingLocation: UIImage {
+        return UIImage(named: "onboarding_location")!
+    }
+    
+    class var onboardingWeather: UIImage {
+        return UIImage(named: "onboarding_weather")!
+    }
+    
+    class var onboardingWorld: UIImage {
+        return UIImage(named: "onboarding_world")!
+    }
 }
