@@ -28,9 +28,7 @@ class OnboardingFlowCoordinator: Coordinator {
     // MARK: Private functions
     private func showOnboardingVC() {
         let onboardingViewController = OnboardingFlowFactory.makeOnboardingViewController(delegate: self, applicationRepository: applicationRepository)
-        router.push(onboardingViewController, animated: true) { [weak self] in
-            self?.finishFlow?(self)
-        }
+        router.setRootModule(onboardingViewController, hideBar: true)
     }
 }
 

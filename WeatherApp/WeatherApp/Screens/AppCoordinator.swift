@@ -32,8 +32,8 @@ class AppCoordinator: Coordinator {
     private func runOnboardingFlow() {
         let coordinator = OnboardingFlowCoordinator(router: router, applicationRepository: applicationRepository)
         coordinator.finishFlow = { [weak self] coordinator in
-            self?.removeCoordinator(coordinator)
             self?.runDashboardFlow()
+            self?.removeCoordinator(coordinator)
         }
         addCoordinator(coordinator)
         coordinator.start()
