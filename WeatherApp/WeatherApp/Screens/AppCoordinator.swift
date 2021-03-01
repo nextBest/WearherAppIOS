@@ -9,21 +9,34 @@
 import UIKit
 
 class AppCoordinator: Coordinator {
+    private let applicationRepository: ApplicationRepository
+    private let appStorage = AppStorageImpl()
     private let router: Router
     private let requestManager = RequestManager()
     private let weatherRepository: WeatherRepository
     
     override init() {
+        self.applicationRepository = ApplicationRepositoryImpl(appStorage: appStorage)
         self.router = Router(rootController: AppCoordinator.makeRootViewControllerWithKeyAndVisible())
         self.weatherRepository = WeatherRepositoryImpl(weatherApi: WeatherApiImpl(requestManager: requestManager))
     }
     
     override func start() {
-        runDashboardFlow()
+        if applicationRepository.canPresentOnboarding() {
+            runOnboardingFlow()
+        } else {
+            runDashboardFlow()
+        }
     }
     
-    private func runTutorialFlow() {
-        // TODO run tutorial flow
+    private func runOnboardingFlow() {
+        let coordinator = OnboardingFlowCoordinator(router: router, applicationRepository: applicationRepository)
+        coordinator.finishFlow = { [weak self] coordinator in
+            self?.runDashboardFlow()
+            self?.removeCoordinator(coordinator)
+        }
+        addCoordinator(coordinator)
+        coordinator.start()
     }
     
     private func runDashboardFlow() {

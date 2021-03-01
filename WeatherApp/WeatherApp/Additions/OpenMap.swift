@@ -9,7 +9,7 @@
 import Foundation
 import MapKit
 
-class OpenMap {
+struct OpenMap {
     static func forPlace(latLong: String, placeName: String) {
         guard let coordinates = latLong.stringToCLLocationCoordinate2D() else {
             return

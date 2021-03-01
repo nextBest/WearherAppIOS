@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Configuration {
+struct Configuration {
     static let baseUrlString = "https://www.metaweather.com/api/"
     
     static func imageUrl(weatherStateAbbr: String) -> URL? {

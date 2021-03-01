@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Onboarding View Controller-->
+        <scene sceneID="LSK-Zj-1nx">
+            <objects>
+                <viewController storyboardIdentifier="OnboardingViewController" id="ewg-Wf-W9b" customClass="OnboardingViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FhU-Wj-TAG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.25" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_bg" translatesAutoresizingMaskIntoConstraints="NO" id="TIy-xM-lnf">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2QM-hp-ury">
+                                <rect key="frame" x="0.0" y="44" width="414" height="798"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" name="blue"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdF-0w-ohH">
+                                <rect key="frame" x="261" y="64" width="113" height="30"/>
+                                <state key="normal" title="Onboarding.skip">
+                                    <color key="titleColor" name="blue"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="Onboarding.skip"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="skipButtonClicked:" destination="ewg-Wf-W9b" eventType="touchUpInside" id="OZu-Vo-3ZZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4Uj-u7-gA2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="TIy-xM-lnf" secondAttribute="trailing" id="0se-eN-bcN"/>
+                            <constraint firstItem="4Uj-u7-gA2" firstAttribute="trailing" secondItem="qdF-0w-ohH" secondAttribute="trailing" constant="40" id="2xD-cw-UqA"/>
+                            <constraint firstItem="4Uj-u7-gA2" firstAttribute="bottom" secondItem="2QM-hp-ury" secondAttribute="bottom" constant="20" id="EOV-6O-n0r"/>
+                            <constraint firstItem="4Uj-u7-gA2" firstAttribute="trailing" secondItem="2QM-hp-ury" secondAttribute="trailing" id="TYt-j7-MNj"/>
+                            <constraint firstAttribute="bottom" secondItem="TIy-xM-lnf" secondAttribute="bottom" id="UKm-Wa-ZPe"/>
+                            <constraint firstItem="2QM-hp-ury" firstAttribute="leading" secondItem="4Uj-u7-gA2" secondAttribute="leading" id="ZWb-r7-MXx"/>
+                            <constraint firstItem="qdF-0w-ohH" firstAttribute="top" secondItem="4Uj-u7-gA2" secondAttribute="top" constant="20" id="hd5-8p-U4A"/>
+                            <constraint firstItem="TIy-xM-lnf" firstAttribute="top" secondItem="FhU-Wj-TAG" secondAttribute="top" id="p7L-hZ-90u"/>
+                            <constraint firstItem="TIy-xM-lnf" firstAttribute="leading" secondItem="FhU-Wj-TAG" secondAttribute="leading" id="ujw-8d-G7v"/>
+                            <constraint firstItem="2QM-hp-ury" firstAttribute="top" secondItem="4Uj-u7-gA2" secondAttribute="top" id="wFa-af-uRC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="onboardingView" destination="2QM-hp-ury" id="vMe-Gv-Gfe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5LA-LU-vot" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="25" y="153"/>
+        </scene>
+        <!--Onboarding Page View Controller-->
+        <scene sceneID="skL-5h-9zu">
+            <objects>
+                <pageViewController storyboardIdentifier="OnboardingPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="IE9-4b-F7g" customClass="OnboardingPageViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fQz-Zn-MHT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="961" y="153"/>
+        </scene>
+        <!--Onboarding Single Page View Controller-->
+        <scene sceneID="n4z-C0-YqV">
+            <objects>
+                <viewController storyboardIdentifier="OnboardingSinglePageViewController" id="Fqf-AF-zYa" customClass="OnboardingSinglePageViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RIf-cW-yfA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ofa-Cj-FRt" customClass="MainButton" customModule="WeatherApp" customModuleProvider="target">
+                                <rect key="frame" x="20" y="802" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="iQm-VP-D1w"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="actionButtonClicked:" destination="Fqf-AF-zYa" eventType="touchUpInside" id="qkl-Tr-g75"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKw-GC-5IM">
+                                <rect key="frame" x="20" y="506" width="374" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" name="blue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gk7-ki-qO7">
+                                <rect key="frame" x="0.0" y="64" width="414" height="432"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboarding_weather" translatesAutoresizingMaskIntoConstraints="NO" id="edE-Bg-fP8">
+                                        <rect key="frame" x="132" y="141" width="150" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="k4k-0W-7Ai"/>
+                                            <constraint firstAttribute="height" constant="150" id="oqN-Q3-Am4"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="edE-Bg-fP8" firstAttribute="centerX" secondItem="Gk7-ki-qO7" secondAttribute="centerX" id="KGL-RY-4zi"/>
+                                    <constraint firstItem="edE-Bg-fP8" firstAttribute="centerY" secondItem="Gk7-ki-qO7" secondAttribute="centerY" id="elR-8a-PaT"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcY-hv-kGZ">
+                                <rect key="frame" x="20" y="540" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="blue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="43P-UV-qS6"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Gk7-ki-qO7" firstAttribute="leading" secondItem="43P-UV-qS6" secondAttribute="leading" id="0cK-PI-JF6"/>
+                            <constraint firstItem="Gk7-ki-qO7" firstAttribute="top" secondItem="43P-UV-qS6" secondAttribute="top" constant="20" id="3ba-72-KVc"/>
+                            <constraint firstItem="zKw-GC-5IM" firstAttribute="centerY" secondItem="RIf-cW-yfA" secondAttribute="centerY" constant="70" id="4oo-Xa-ita"/>
+                            <constraint firstItem="43P-UV-qS6" firstAttribute="bottom" secondItem="Ofa-Cj-FRt" secondAttribute="bottom" constant="10" id="7pE-wr-mM7"/>
+                            <constraint firstItem="Ofa-Cj-FRt" firstAttribute="top" relation="greaterThanOrEqual" secondItem="kcY-hv-kGZ" secondAttribute="bottom" constant="20" id="LlD-bJ-BFh"/>
+                            <constraint firstItem="Ofa-Cj-FRt" firstAttribute="leading" secondItem="43P-UV-qS6" secondAttribute="leading" constant="20" id="SLD-fl-IQx"/>
+                            <constraint firstItem="43P-UV-qS6" firstAttribute="trailing" secondItem="Gk7-ki-qO7" secondAttribute="trailing" id="Uau-mE-CZD"/>
+                            <constraint firstItem="43P-UV-qS6" firstAttribute="trailing" secondItem="Ofa-Cj-FRt" secondAttribute="trailing" constant="20" id="WHh-7h-NeR"/>
+                            <constraint firstItem="zKw-GC-5IM" firstAttribute="top" secondItem="Gk7-ki-qO7" secondAttribute="bottom" constant="10" id="We7-tW-JDC"/>
+                            <constraint firstItem="kcY-hv-kGZ" firstAttribute="top" secondItem="zKw-GC-5IM" secondAttribute="bottom" constant="10" id="X3m-M7-ukM"/>
+                            <constraint firstItem="zKw-GC-5IM" firstAttribute="leading" secondItem="43P-UV-qS6" secondAttribute="leading" constant="20" id="X8X-L0-zSx"/>
+                            <constraint firstItem="43P-UV-qS6" firstAttribute="trailing" secondItem="zKw-GC-5IM" secondAttribute="trailing" constant="20" id="cUq-LK-h2l"/>
+                            <constraint firstItem="43P-UV-qS6" firstAttribute="trailing" secondItem="kcY-hv-kGZ" secondAttribute="trailing" constant="20" id="r0P-aT-UiD"/>
+                            <constraint firstItem="kcY-hv-kGZ" firstAttribute="leading" secondItem="43P-UV-qS6" secondAttribute="leading" constant="20" id="xwe-XC-O1r"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="actionButton" destination="Ofa-Cj-FRt" id="dKn-UR-abD"/>
+                        <outlet property="onboardingImage" destination="edE-Bg-fP8" id="519-Rz-xLG"/>
+                        <outlet property="subtitleLabel" destination="kcY-hv-kGZ" id="1oD-xY-NXL"/>
+                        <outlet property="titleLabel" destination="zKw-GC-5IM" id="Poy-J4-BZ1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SXu-O1-xTP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1928" y="153"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="onboarding_weather" width="128" height="128"/>
+        <image name="splash_bg" width="540" height="960"/>
+        <namedColor name="blue">
+            <color red="0.14117647058823529" green="0.40000000000000002" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
